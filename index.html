@@ -81,49 +81,53 @@
 
 <body>
 
-<div class="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-
 	<header>
-		
-		<h1><a href="/">Page Title</a></h1>
-		
-		<nav>
-		
-			<ol>
-				<li><a href="">Nav Link 1</a></li>
-				<li><a href="">Nav Link 2</a></li>
-				<li><a href="">Nav Link 3</a></li>
-			</ol>
-		
-		</nav>
-	
-	</header>
-	
-	<article>
-		
-		<h1>Article Header</h1>
-		
-		<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
-		
-		<h2>Article Subhead</h2>
-		
-		<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
-	
-	</article>
-	
-	<aside>
-	
-		<h2>Sidebar Content</h2>
-	
-	</aside>
-	
-	<footer>
-		
-		<p><small>&copy; Copyright Your Name Here 2013. All Rights Reserved.</small></p>
-		
-	</footer>
+		<nav class="clearfix">
+			<div id="nav-left">
+				<ul>
+					<li>
+						<a class="dropdown" href="#">Menu</a>
+						<ul class="menu">
+							<li><a href="#">Daily Menu</a></li>
+							<li><a href="#">Sunday Prix Fixe</a></li>
+							<li><a href="#">Tuesday Tasting Menu</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Info</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a class="hidden mobile-only" href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
+				</ul>
+			</div>
 
-</div>
+			<div id="nav right">
+					<a id="ot-button" href="#" alt="OpenTable Reservation">Make a Reservation</a>
+			</div>
+			<h1 id="logo">
+				<span>Will BYOB</span>
+			</h1>
+		</nav>
+		<div id="open-table" class="">
+			<script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=90274&restref=90274&bgcolor=372E5A&titlecolor=FFFFFF&subtitlecolor=DADADA&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_black.png&otlink=FFFFFF&icon=light&mode=wide&hover=1"></script>
+			<a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274" class="OT_ExtLink">Book on OpenTable website</a>
+		</div>
+	</header>
+
+	<section id="main">
+		<div class="center">
+			<h2>A Modern French-inspired BYOB</h2>
+			<h3>located on East Passyunk Avenue in the heart of South Philadelphia</h3>
+		</div>
+		<div id="footer">
+			<h4>1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
+			<h4>t. 215.271.7683</h4>
+			<h4><a href="mailto:info@willbyob.com">info@willbyob.com</a></h4>
+			<h4><a class="twitter icon-twitter" href="">twitter</a></h4>
+			<h4><a class="facebook icon-facebook" href="">facebook</a></h4>
+		</div>
+		<div id="maximage">
+			<img src="../img/p3-optim.jpg" width="2563" height="1709" />
+		</div>
+	</section>
 
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 		 http://chromium.org/developers/how-tos/chrome-frame-getting-started -->
