@@ -1,3 +1,237 @@
 /* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.clearfix:before, .clearfix:after {
+  content:'';
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all .2s linear;
+
+  &:hover { 
+    color: $chef-blue;
+    font-weight: 400;
+    transition: all .2s linear;
+  }
+}
+
+::selection, ::-moz-selection {
+  background: $chef-blue;
+  color: #fff;
+  text-shadow: none;
+}
+
+
+
+/* ==========================================================================
    Site styles
    ========================================================================== */
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 155px;
+  margin: 0;
+  z-index: 2;
+  background-color: #fff;
+
+  nav {
+    position: relative;
+    font-size: 1.2em;
+    max-width: 1020px;
+    margin: 0 auto;
+
+    h1 {
+
+      a {
+        display: block;
+        cursor: default;
+        background: url('../img/willbyob-logo.svg') no-repeat center center;
+        background-size: auto 95px;
+        height: 155px;
+        margin: 0 auto;
+
+        span { display: none; }
+      }
+    }
+
+    ul{
+      padding-left: 30px;
+
+      li {
+        padding-right: 13px;
+        display: inline-block;
+
+        &.hidden {
+          display: none;
+        }
+
+        a {
+          padding: 16px 0;
+          border-bottom: 1px solid transparent;
+
+          &:hover { border-bottom: 4px solid $chef-blue; padding: 6px 0; }
+        }
+      }
+    }
+  }
+}
+
+
+
+#nav-left {
+  position:relative;
+  float: left;
+  margin-top: 100px;
+
+  .menu {
+    display: none;
+
+    li a {
+      line-height: 30px;
+      font-size: 1.5em;
+      color: $black;
+      border-bottom: 1px solid transparent;
+
+      transition: all .2s linear;
+
+      &:hover { 
+        color: $chef-blue;
+        border-bottom: 4px solid $chef-blue;
+
+        transition: all .2s linear;
+
+      }
+    }
+  }
+}
+
+#nav-right {
+  position: relative;
+  float: right;
+  margin-top: 100px;
+
+  #ot-button {
+    padding: 16px 0;
+    margin-right: 30px;
+    border-bottom: 1px solid transparent;
+    &:hover { border-bottom: 4px solid $chef-blue; padding: 6px 0; }
+  }
+}
+
+
+
+
+#open-table {
+  display: none;
+}
+
+#main {
+  height: 100%;
+  margin-top: -155px;
+  background: url('../img/p3optim.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.centered {
+  display: block;
+  max-width: 50em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .35);
+    margin-bottom: .5em;
+  }
+
+
+  h3 {
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    max-width: 30rem;
+    margin: 0 auto;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 4px; 
+      background-color: #fff;
+      margin: 0 auto;
+      margin-top: .7em;
+    }
+  }
+}
+
+.bottom {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+.row {
+  max-width: 1020px;
+  margin: 0 auto;
+
+  h4 {
+    border-right: 2px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0 18px;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    vertical-align: middle;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &.icon {
+      font-size: 2.25em;
+      border: none;
+      padding: 0;
+      padding-left: 18px;
+      vertical-align: middle;
+    }
+
+    a {
+      color: #fff;
+      text-shadow: 0 0 6px rgba(0, 0, 0, .25);
+
+      &:hover {
+        color: $sky;
+      }
+    }
+  }
+}

@@ -54,7 +54,9 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 	
 	<!-- concatenate and minify for production -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/will.css" />
+
 	
 	<!-- This is an un-minified, complete version of Modernizr. 
 		 Before you move to production, you should generate a custom build that only has the detects you need. -->
@@ -95,15 +97,17 @@
 					</li>
 					<li><a href="#">Info</a></li>
 					<li><a href="#">Gallery</a></li>
-					<li><a class="hidden mobile-only" href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
+					<li class="hidden mobile-only" ><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
 				</ul>
 			</div>
 
-			<div id="nav right">
+			<div id="nav-right">
 					<a id="ot-button" href="#" alt="OpenTable Reservation">Make a Reservation</a>
 			</div>
-			<h1 id="logo">
-				<span>Will BYOB</span>
+			<h1>
+				<a id="logo" href="/">
+					<span>Will BYOB</span>
+				</a>
 			</h1>
 		</nav>
 		<div id="open-table" class="">
@@ -113,20 +117,21 @@
 	</header>
 
 	<section id="main">
-		<div class="center">
+
+		<div class="centered">
 			<h2>A Modern French-inspired BYOB</h2>
 			<h3>located on East Passyunk Avenue in the heart of South Philadelphia</h3>
 		</div>
-		<div id="footer">
-			<h4>1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
-			<h4>t. 215.271.7683</h4>
-			<h4><a href="mailto:info@willbyob.com">info@willbyob.com</a></h4>
-			<h4><a class="twitter icon-twitter" href="">twitter</a></h4>
-			<h4><a class="facebook icon-facebook" href="">facebook</a></h4>
-		</div>
-		<div id="maximage">
-			<img src="../img/p3-optim.jpg" width="2563" height="1709" />
-		</div>
+		<footer class="bottom">
+			<div class="row">
+				<h4>1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
+				<h4>t. 215.271.7683</h4>
+				<h4><a href="mailto:info@willbyob.com">info@willbyob.com</a></h4>
+				<h4 class="icon"><a class="icon-twitter" href="" alt="twitter"></a></h4>
+				<h4 class="icon"><a class="icon-facebook" href="" alt="facebook"></a></h4>
+			</div>
+		</footer>
+		
 	</section>
 
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
