@@ -537,19 +537,6 @@ input[type=button] {
  *
  */
 /* ==========================================================================
-   Media Queries
-
-   - Not-small
-   - Medium
-   - Large
-   ========================================================================== */
-/* Not-small (anything bigger than your first breakpoint)
-   ========================================================================== */
-/* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
-   ========================================================================== */
-/* Large - only targets 2nd breakpoint. Styles do not extend past 64em.
-   ========================================================================== */
-/* ==========================================================================
    TYPE
    - Copy
    - Headings
@@ -636,15 +623,12 @@ html, body {
   height: 100%;
   width: 100%; }
 
-.clearfix:before, .clearfix:after {
-  content: '';
-  display: table;
-  clear: both; }
-
 body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #272727;
+  -webkit-font-smoothing: antialiased; }
 
 a {
   text-decoration: none;
@@ -674,73 +658,106 @@ a {
    ========================================================================== */
 header {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   height: 155px;
+  width: 100%;
   margin: 0;
   z-index: 2;
-  background-color: #fff; }
-  header nav {
-    position: relative;
-    font-size: 1.2em;
-    max-width: 1020px;
-    margin: 0 auto; }
-    header nav h1 a {
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  background: url("../img/willbyob-logo.svg") no-repeat center center white;
+  -webkit-background-size: auto 95px;
+  background-size: auto 95px; }
+  header h1 a {
+    position: absolute;
+    display: block;
+    height: 95px;
+    width: 150px;
+    top: 40px;
+    right: 50%;
+    margin-right: -65px;
+    cursor: pointer; }
+    header h1 a span {
+      display: none; }
+  header #desktop {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    header #desktop:after {
+      content: " ";
       display: block;
-      cursor: default;
-      background: url("../img/willbyob-logo.svg") no-repeat center center;
-      -webkit-background-size: auto 95px;
-      background-size: auto 95px;
-      height: 155px;
-      margin: 0 auto; }
-      header nav h1 a span {
-        display: none; }
-    header nav ul {
-      padding-left: 30px; }
-      header nav ul li {
-        padding-right: 13px;
+      clear: both; }
+    header #desktop:before, header #desktop:after {
+      content: "";
+      display: table; }
+    header #desktop:after {
+      clear: both; }
+    header #desktop #menu-dropdown {
+      display: none; }
+    header #desktop ul {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 30px;
+      margin-top: 100px; }
+      header #desktop ul:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      header #desktop ul:before, header #desktop ul:after {
+        content: "";
+        display: table; }
+      header #desktop ul:after {
+        clear: both; }
+      header #desktop ul li {
+        float: left;
+        font-size: 1.2em;
+        padding-right: 4%;
         display: inline-block; }
-        header nav ul li.hidden {
-          display: none; }
-        header nav ul li a {
+        header #desktop ul li a {
           padding: 16px 0;
           border-bottom: 1px solid transparent; }
-          header nav ul li a:hover {
+          header #desktop ul li a:hover {
             border-bottom: 4px solid #283891;
             padding: 6px 0; }
+      header #desktop ul #ot-button {
+        float: right;
+        padding: 0; }
 
-#nav-left {
-  position: relative;
-  float: left;
-  margin-top: 100px; }
-  #nav-left .menu {
-    display: none; }
-    #nav-left .menu li a {
-      line-height: 30px;
+/* -----  Mobile slide-out nav menu  ----- */
+.panel {
+  position: fixed;
+  left: -19em;
+  /*left or right and the width of your navigation panel*/
+  width: 19em;
+  /*should match the above value*/ }
+
+.menu-link {
+  font-size: 2.2em;
+  -webkit-font-smoothing: antialiased;
+  display: none;
+  padding: 50px 30px 20px; }
+
+#mobile {
+  display: none; }
+  #mobile ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #283891; }
+    #mobile ul li {
+      color: white;
+      display: block;
+      float: none;
       font-size: 1.5em;
-      color: #272727;
-      border-bottom: 1px solid transparent;
-      -webkit-transition: all .2s linear;
-      transition: all .2s linear; }
-      #nav-left .menu li a:hover {
-        color: #283891;
-        border-bottom: 4px solid #283891;
-        -webkit-transition: all .2s linear;
-        transition: all .2s linear; }
-
-#nav-right {
-  position: relative;
-  float: right;
-  margin-top: 100px; }
-  #nav-right #ot-button {
-    padding: 16px 0;
-    margin-right: 30px;
-    border-bottom: 1px solid transparent; }
-    #nav-right #ot-button:hover {
-      border-bottom: 4px solid #283891;
-      padding: 6px 0; }
+      padding: 10px 40px;
+      border-bottom: 2px solid #1e2e87; }
+      #mobile ul li a {
+        color: #fff;
+        line-height: 40px;
+        text-shadow: 1px 1px 2px #1e2e87; }
+        #mobile ul li a:hover {
+          color: #8fa2f7; }
 
 #open-table {
   display: none; }
@@ -787,32 +804,72 @@ header {
   width: 100%; }
 
 .row {
-  max-width: 1020px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .row:after {
+    content: " ";
+    display: block;
+    clear: both; }
   .row h4 {
-    border-right: 2px solid #fff;
     color: #fff;
-    display: inline-block;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
-    padding: 0 18px;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    vertical-align: middle; }
-    .row h4:first-of-type {
-      padding-left: 0; }
-    .row h4.icon {
-      font-size: 2.25em;
-      border: none;
-      padding: 0;
-      padding-left: 18px;
-      vertical-align: middle; }
+    line-height: 28px;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); }
+    .row h4.addy {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+    .row h4.phone {
+      width: 44.44444%;
+      float: left;
+      margin-right: 11.11111%; }
+    .row h4.email {
+      width: 44.44444%;
+      float: right;
+      margin-right: 0; }
+    .row h4.social {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 1.2em; }
+      .row h4.social a {
+        font-size: 2em; }
     .row h4 a {
       color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
       text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); }
       .row h4 a:hover {
         color: #8fa2f7; }
 
 /* ==========================================================================
-   styles
+   Media Queries
+
+   - Not-small
+   - Medium
+   - Large
+   ========================================================================== */
+/* Not-small (anything bigger than your first breakpoint)
+   ========================================================================== */
+@media screen and (max-width: 48em) {
+  #mobile {
+    display: block; }
+
+  .menu-link {
+    display: block; }
+
+  #desktop {
+    display: none; } }
+/* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
+   ========================================================================== */
+/* Large - only targets 2nd breakpoint. Styles do not extend past 64em.
    ========================================================================== */

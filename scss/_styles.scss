@@ -7,16 +7,13 @@ html, body {
   width: 100%;
 }
 
-.clearfix:before, .clearfix:after {
-  content:'';
-  display: table;
-  clear: both;
-}
-
 body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 14px;
   font-weight: 300;
+  color: $black;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 a {
@@ -41,51 +38,58 @@ a {
 
 
 
+
 /* ==========================================================================
    Site styles
    ========================================================================== */
 
 header {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   height: 155px;
+  width: 100%;
   margin: 0;
   z-index: 2;
-  background-color: #fff;
+  box-shadow: 0 2px 6px rgba( 0, 0, 0, .25);
+  background: url('../img/willbyob-logo.svg') no-repeat center center #fff;
+  background-size: auto 95px;
+  
+  h1 {
 
-  nav {
-    position: relative;
-    font-size: 1.2em;
-    max-width: 1020px;
-    margin: 0 auto;
+    a {
+      position: absolute;
+      display: block;
+      height: 95px;
+      width: 150px;
+      top: 40px;
+      right: 50%;
+      margin-right: -65px;
+      cursor: pointer;
 
-    h1 {
+      span { display: none; }
+    }
+  }
 
-      a {
-        display: block;
-        cursor: default;
-        background: url('../img/willbyob-logo.svg') no-repeat center center;
-        background-size: auto 95px;
-        height: 155px;
-        margin: 0 auto;
+  #desktop {
 
-        span { display: none; }
-      }
+    @include container;
+    @include clearfix;
+
+    #menu-dropdown {
+      display: none;
     }
 
     ul{
-      padding-left: 30px;
+      @include container(1000px);
+      @include clearfix;
+      padding: 0 30px;
+      margin-top: 100px;
+
 
       li {
-        padding-right: 13px;
+        float: left;
+        font-size: 1.2em;
+        padding-right: 4%;
         display: inline-block;
-
-        &.hidden {
-          display: none;
-        }
 
         a {
           padding: 16px 0;
@@ -94,58 +98,67 @@ header {
           &:hover { border-bottom: 4px solid $chef-blue; padding: 6px 0; }
         }
       }
-    }
-  }
-}
 
-
-
-#nav-left {
-  position:relative;
-  float: left;
-  margin-top: 100px;
-
-  .menu {
-    display: none;
-
-    li a {
-      line-height: 30px;
-      font-size: 1.5em;
-      color: $black;
-      border-bottom: 1px solid transparent;
-
-      transition: all .2s linear;
-
-      &:hover { 
-        color: $chef-blue;
-        border-bottom: 4px solid $chef-blue;
-
-        transition: all .2s linear;
-
+      #ot-button {
+        float: right;
+        padding: 0;
       }
     }
   }
 }
 
-#nav-right {
-  position: relative;
-  float: right;
-  margin-top: 100px;
+/* -----  Mobile slide-out nav menu  ----- */
 
-  #ot-button {
-    padding: 16px 0;
-    margin-right: 30px;
-    border-bottom: 1px solid transparent;
-    &:hover { border-bottom: 4px solid $chef-blue; padding: 6px 0; }
+.panel {
+    position: fixed;
+    left: -19em; /*left or right and the width of your navigation panel*/
+    width: 19em; /*should match the above value*/
+}
+
+.menu-link {
+  font-size: 2.2em;
+  -webkit-font-smoothing: antialiased;
+  display: none;
+  padding: 50px 30px 20px;
+
+}
+
+#mobile {
+  display: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $chef-blue;
+
+    li {
+      color: $white;
+      display: block;
+      float: none;
+      font-size: 1.5em;
+      padding: 10px 40px;
+      border-bottom: 2px solid $chef-blue - 10;
+
+      a {
+        color: #fff;
+        line-height: 40px;
+        text-shadow: 1px 1px 2px $chef-blue - 10;
+        &:hover { color: $sky; }
+      }
+    }
   }
 }
 
-
-
+// Open Table slide out div
 
 #open-table {
   display: none;
 }
+
+
+// Main content
 
 #main {
   height: 100%;
@@ -199,39 +212,48 @@ header {
 }
 
 .row {
-  max-width: 1020px;
+  // max-width: 810px;
   margin: 0 auto;
+  padding: 20px;
+  @include container();
 
   h4 {
-    border-right: 2px solid #fff;
-    color: #fff;
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 24px;
-    padding: 0 18px;
-    text-shadow: 0 0 6px rgba(0, 0, 0, .25);
-    vertical-align: middle;
 
-    &:first-of-type {
-      padding-left: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .25);
+
+    &.addy {
+      @include span(2 of 2); 
     }
 
-    &.icon {
-      font-size: 2.25em;
-      border: none;
-      padding: 0;
-      padding-left: 18px;
-      vertical-align: middle;
+    &.phone {
+      @include span(1 of 2);
+    }
+
+    &.email {
+      @include span(1 of 2 last);
+    }
+
+    &.social {
+      @include span(2 of 2);
+      margin-top: 1.2em;
+
+      a { font-size: 2em; }
     }
 
     a {
       color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
       text-shadow: 0 0 6px rgba(0, 0, 0, .25);
+      &:hover { color: $sky; }
 
-      &:hover {
-        color: $sky;
-      }
     }
   }
 }

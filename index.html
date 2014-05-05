@@ -55,12 +55,15 @@
 	
 	<!-- concatenate and minify for production -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/jquery.navobile.css" />
 	<link rel="stylesheet" href="css/will.css" />
 
 	
 	<!-- This is an un-minified, complete version of Modernizr. 
 		 Before you move to production, you should generate a custom build that only has the detects you need. -->
 	<script src="_/js/modernizr-2.7.0.dev.js"></script>
+	
 	
 	<!-- Application-specific meta tags -->
 	<!-- Windows 8 -->
@@ -83,33 +86,42 @@
 
 <body>
 
-	<header>
-		<nav class="clearfix">
-			<div id="nav-left">
-				<ul>
-					<li>
-						<a class="dropdown" href="#">Menu</a>
-						<ul class="menu">
-							<li><a href="#">Daily Menu</a></li>
-							<li><a href="#">Sunday Prix Fixe</a></li>
-							<li><a href="#">Tuesday Tasting Menu</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Info</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li class="hidden mobile-only" ><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
-				</ul>
-			</div>
+	<header class="push">
 
-			<div id="nav-right">
-					<a id="ot-button" href="#" alt="OpenTable Reservation">Make a Reservation</a>
-			</div>
-			<h1>
-				<a id="logo" href="/">
-					<span>Will BYOB</span>
-				</a>
-			</h1>
+		<!-- off-canvas nav menu for mobile -->
+		<a href="#mobile" class="menu-link">&#9776;</a>
+		<nav id="mobile" class="panel" role="navigation">
+	    <ul>
+	    		<li><a href="#">Make a Reservation</a></li>
+	    		<li><a href="#">Info</a></li>
+	        <li><a href="#">Daily Menu</a></li>
+	        <li><a href="#">Sunday Prix Fixe</a></li>
+	        <li><a href="#">Tuesday Tastings</a></li>
+	        <li><a href="#">Gallery</a></li>
+	    </ul>
 		</nav>
+
+
+		<nav id="desktop">
+			<ul id="main-nav">
+				<li>
+					<a class="dropdown" href="#">Menu</a>
+					<ul id="menu-dropdown">
+						<li><a href="#">Daily Menu</a></li>
+						<li><a href="#">Sunday Prix Fixe</a></li>
+						<li><a href="#">Tuesday Tasting Menu</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Info</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li id="ot-button"><a href="#" alt="OpenTable Reservation">Make a Reservation</a></li>
+			</ul>
+		</nav>
+		<h1>
+			<a href="/">
+				<span>Will BYOB</span>
+			</a>
+		</h1>
 		<div id="open-table" class="">
 			<script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=90274&restref=90274&bgcolor=372E5A&titlecolor=FFFFFF&subtitlecolor=DADADA&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_black.png&otlink=FFFFFF&icon=light&mode=wide&hover=1"></script>
 			<a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274" class="OT_ExtLink">Book on OpenTable website</a>
@@ -118,17 +130,17 @@
 
 	<section id="main">
 
-		<div class="centered">
+		<div class="centered push">
 			<h2>A Modern French-inspired BYOB</h2>
 			<h3>located on East Passyunk Avenue in the heart of South Philadelphia</h3>
 		</div>
-		<footer class="bottom">
+		<footer class="bottom push">
 			<div class="row">
-				<h4>1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
-				<h4>t. 215.271.7683</h4>
-				<h4><a href="mailto:info@willbyob.com">info@willbyob.com</a></h4>
-				<h4 class="icon"><a class="icon-twitter" href="" alt="twitter"></a></h4>
-				<h4 class="icon"><a class="icon-facebook" href="" alt="facebook"></a></h4>
+				<h4 class="addy">1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
+				<h4 class="phone">t. 215.271.7683</h4>
+				<h4 class="email"><a href="mailto:info@willbyob.com">info@willbyob.com</a></h4>
+				<h4 class="social"><a class="icon-twitter" href="http://www.twitter.com/willbyob" alt="twitter"></a>
+				<a class="icon-facebook" href="http://www.facebook.com/willbyob" alt="facebook"></a></h4>
 			</div>
 		</footer>
 		
@@ -145,6 +157,8 @@
 <!-- this is where we put our custom functions -->
 <!-- don't forget to concatenate and minify if needed -->
 <script src="js/functions.js"></script>
+<script src="js/jquery.big-slide.js"></script>
+
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
