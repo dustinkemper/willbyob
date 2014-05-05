@@ -3,16 +3,10 @@
    ========================================================================== */
 @import "normalize";
 @import "reset";
+
+@import "../bower_components/susy/sass/susy";
 @import "variables";
 @import "queries";
-@import "grid";
 @import "type";
 @import "styles";
-
-
-/* ==========================================================================
-   styles
-   ========================================================================== */
-
-
-
+@import "grid";

@@ -15,7 +15,12 @@
 	$(document).ready(function (){
 	
 		// your functions go here
-	
+		$('.menu-link').bigSlide({
+			menu: ('#mobile'),
+			menuWidth: '19em'
+		});
+
+
 	});
 	
 	
