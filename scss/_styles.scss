@@ -42,6 +42,9 @@ a {
   text-shadow: none;
 }
 
+.push {
+  position: relative;
+}
 
 /* ==========================================================================
    Site styles
@@ -251,6 +254,65 @@ header {
       margin-top: .7em;
     }
   }
+}
+
+#content {
+  @include container;
+
+  .menu-title {
+    background: url(../img/p1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    height: 200px;
+    margin-bottom: 40px;
+    
+    h3 {
+      color: #fff;
+      text-shadow: 0 0 6px rgba(0, 0, 0, .35);
+
+      span { font-size: $font-size-4; font-weight: 400; }
+    }
+  }
+
+  .menu-1 {
+    @include span(1 of 1);
+    text-align: center;
+
+    .course {
+      padding: 0 30px;
+
+
+      &:after {
+        content: '';
+        display: block;
+        margin: 30px auto;
+        border-bottom: 1px solid $medium-gray;
+        width: 60px;
+      }
+    }
+
+    .dish {
+      line-height: 30px;
+      margin-bottom: 20px;
+      
+      h4 { color: $dark-gray; }
+      p {
+        color: #555;
+        font-family: 'Playfair', Georgia, serif;
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+    }
+
+    .dessert {
+      padding: 0 30px;
+      margin-bottom: 60px;
+    }
+  }
+
 }
 
 .bottom {

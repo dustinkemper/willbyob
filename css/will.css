@@ -653,6 +653,9 @@ a {
   color: #fff;
   text-shadow: none; }
 
+.push {
+  position: relative; }
+
 /* ==========================================================================
    Site styles
    ========================================================================== */
@@ -837,6 +840,55 @@ header {
       background-color: #fff;
       margin: 0 auto;
       margin-top: .7em; }
+
+#content {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  #content:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  #content .menu-title {
+    background: url(../img/p1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    height: 200px;
+    margin-bottom: 40px; }
+    #content .menu-title h3 {
+      color: #fff;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.35); }
+      #content .menu-title h3 span {
+        font-size: 24px;
+        font-weight: 400; }
+  #content .menu-1 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center; }
+    #content .menu-1 .course {
+      padding: 0 30px; }
+      #content .menu-1 .course:after {
+        content: '';
+        display: block;
+        margin: 30px auto;
+        border-bottom: 1px solid #888888;
+        width: 60px; }
+    #content .menu-1 .dish {
+      line-height: 30px;
+      margin-bottom: 20px; }
+      #content .menu-1 .dish h4 {
+        color: #363636; }
+      #content .menu-1 .dish p {
+        color: #555;
+        font-family: 'Playfair', Georgia, serif;
+        font-size: 1.2rem;
+        font-style: italic; }
+    #content .menu-1 .dessert {
+      padding: 0 30px;
+      margin-bottom: 60px; }
 
 .bottom {
   position: absolute;
