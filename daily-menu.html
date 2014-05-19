@@ -55,6 +55,7 @@
   
   <!-- concatenate and minify for production -->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/jquery.navobile.css" />
   <link rel="stylesheet" href="css/will.css" />
@@ -104,8 +105,8 @@
 
     <nav id="desktop">
       <ul id="main-nav">
-        <li>
-          <a class="dropdown" href="#">Menu</a>
+        <li class="dropdown">
+          <a href="#">Menu</a>
           <ul id="menu-dropdown">
             <li><a href="#">Daily Menu</a></li>
             <li><a href="#">Sunday Prix Fixe</a></li>
@@ -128,16 +129,51 @@
     </div>
   </header>
 
-  <section id="main">
+  <section id="content" class="menu-1">
 
-    <div class="centered push">
-      <h2>A Modern French-inspired BYOB</h2>
-      <h3>located on East Passyunk Avenue in the heart of South Philadelphia</h3>
+    <div class="push">
+      <h3 class="menu-title">Dinner Menu<span class="date">Friday, May 16, 2014</span></h3>
+      <div id="course">
+        <article class="dish">
+          <h4>Persimmon + Sunchoke Salad</h4>
+          <p>Honey Miso, Beet, Pistachio</p>
+        </article>
+      </div>
+      <div id="course">
+        <article class="dish">
+          <h4>Roasted Hen of the Woods Mushroom</h4>
+          <p>Ricotta, Madiera, Petite Herb</p>
+        </article>
+        <article class="dish">
+          <h4>Chestnut + Parsnip Velouté</h4>
+          <p>Rye Crumble, Uni Crema, Cider</p>
+        </article>
+      </div>
+      <div id="course">
+        <article class="dish">
+          <h4>Rohan Duck Breast</h4>
+          <p>Anson Mills Gritsm Huckleberry, Salsify</p>
+        </article>
+        <article class="dish">
+          <h4>Pave of Cobia</h4>
+          <p>Black Trumpet Mushroom, Chickpea Panisse, Lobster Bouillon</p>
+        </article>
+      </div>
+      <div id="dessert">
+        <article class="dish">
+          <h4>Soft Chocolate Ganache</h4>
+          <p>Hazelnut, Vietnamese Coffee, Blood Orange</p>
+        </article>
+        <article class="dish">
+          <h4>Pot de Creme</h4>
+          <p>Banana, Salted Rum Caramel, Almond</p>
+        </article>
+      </div>
     </div>
     <footer class="bottom push">
       <div class="row">
         <h4 class="addy">1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
-        <h4 class="phone">t. 215.271.7683</h4>
+        <h4 class="phone">(215) 271-7683</h4>
         <h4 class="email"><a href="mailto:info@willbyob.com">info@willbyob.com</a></h4>
         <h4 class="social"><a class="icon-twitter" href="http://www.twitter.com/willbyob" alt="twitter"></a>
         <a class="icon-facebook" href="http://www.facebook.com/willbyob" alt="facebook"></a></h4>

@@ -643,12 +643,12 @@ a {
     -webkit-transition: all .2s linear;
     transition: all .2s linear; }
 
-::-moz-selection, ::-moz-selection {
+::-moz-selection {
   background: #283891;
   color: #fff;
   text-shadow: none; }
 
-::selection, ::-moz-selection {
+::selection {
   background: #283891;
   color: #fff;
   text-shadow: none; }
@@ -678,50 +678,88 @@ header {
     cursor: pointer; }
     header h1 a span {
       display: none; }
-  header #desktop {
+  header #main-nav {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto; }
-    header #desktop:after {
+    header #main-nav:after {
       content: " ";
       display: block;
       clear: both; }
-    header #desktop:before, header #desktop:after {
+    header #main-nav:before, header #main-nav:after {
       content: "";
       display: table; }
-    header #desktop:after {
+    header #main-nav:after {
       clear: both; }
-    header #desktop #menu-dropdown {
-      display: none; }
-    header #desktop ul {
+    header #main-nav #menu-dropdown {
+      position: absolute;
+      display: none;
+      background-color: #fff;
+      border-top: 2px solid #283891;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); }
+      header #main-nav #menu-dropdown:before {
+        content: '';
+        width: 43px;
+        height: 4px;
+        background-color: #283891;
+        display: block;
+        position: absolute;
+        margin-top: -6px; }
+      header #main-nav #menu-dropdown li {
+        margin: 0;
+        border-bottom: 1px solid #ebebeb;
+        display: block;
+        float: none; }
+        header #main-nav #menu-dropdown li:before, header #main-nav #menu-dropdown li:after {
+          content: "";
+          display: table; }
+        header #main-nav #menu-dropdown li:after {
+          clear: both; }
+        header #main-nav #menu-dropdown li:last-of-type {
+          border: none; }
+        header #main-nav #menu-dropdown li a {
+          display: block;
+          padding: 6px 16px;
+          line-height: 30px;
+          font-size: 1.2rem;
+          border: none; }
+          header #main-nav #menu-dropdown li a:hover {
+            background-color: #283891;
+            font-weight: 400;
+            color: #fff; }
+    header #main-nav ul {
       max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
       padding: 0 30px;
       margin-top: 100px; }
-      header #desktop ul:after {
+      header #main-nav ul:after {
         content: " ";
         display: block;
         clear: both; }
-      header #desktop ul:before, header #desktop ul:after {
+      header #main-nav ul:before, header #main-nav ul:after {
         content: "";
         display: table; }
-      header #desktop ul:after {
+      header #main-nav ul:after {
         clear: both; }
-      header #desktop ul li {
+      header #main-nav ul li {
         float: left;
-        font-size: 1.2em;
-        padding-right: 4%;
+        font-size: 1.2rem;
+        margin-right: 4%;
         display: inline-block; }
-        header #desktop ul li a {
+        header #main-nav ul li a {
           padding: 16px 0;
           border-bottom: 1px solid transparent; }
-          header #desktop ul li a:hover {
+          header #main-nav ul li a:hover {
             border-bottom: 4px solid #283891;
             padding: 6px 0; }
-      header #desktop ul #ot-button {
+      header #main-nav ul #ot-button {
         float: right;
-        padding: 0; }
+        margin-right: 0; }
 
 /* -----  Mobile slide-out nav menu  ----- */
 .panel {
@@ -771,7 +809,7 @@ header {
 
 .centered {
   display: block;
-  max-width: 50em;
+  max-width: 48em;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -780,6 +818,8 @@ header {
   margin: 0 auto;
   text-align: center; }
   .centered h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
     color: #fff;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
     margin-bottom: .5em; }
@@ -800,47 +840,47 @@ header {
 
 .bottom {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   width: 100%; }
 
-.row {
-  margin: 0 auto;
-  padding: 20px;
+footer {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
-  .row:after {
+  footer:after {
     content: " ";
     display: block;
     clear: both; }
+
+.row {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px; }
   .row h4 {
     color: #fff;
-    font-size: 16px;
+    display: inline-block;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 28px;
     text-align: center;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); }
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    vertical-align: top; }
     .row h4.addy {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0; }
-    .row h4.phone {
-      width: 44.44444%;
-      float: left;
-      margin-right: 11.11111%; }
-    .row h4.email {
-      width: 44.44444%;
-      float: right;
-      margin-right: 0; }
+      padding-right: 16px;
+      border-right: 2px solid #fff; }
+    .row h4 span.phone {
+      padding-right: 16px;
+      padding-left: 16px;
+      border-right: 2px solid #fff; }
+    .row h4 span.email {
+      padding-right: 16px;
+      padding-left: 16px;
+      border-right: 2px solid #fff; }
+      .row h4 span.email a {
+        font-size: 1em; }
     .row h4.social {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 1.2em; }
+      padding-left: 16px; }
       .row h4.social a {
-        font-size: 2em; }
+        font-size: 2rem; }
     .row h4 a {
       color: #fff;
       font-size: 16px;
@@ -858,7 +898,7 @@ header {
    - Medium
    - Large
    ========================================================================== */
-/* Not-small (anything bigger than your first breakpoint)
+/* small (Mobile dude)
    ========================================================================== */
 @media screen and (max-width: 48em) {
   #mobile {
@@ -867,7 +907,7 @@ header {
   .menu-link {
     display: block; }
 
-  #desktop {
+  #main-nav {
     display: none; } }
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
    ========================================================================== */

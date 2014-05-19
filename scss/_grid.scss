@@ -8,7 +8,7 @@
 
 
 
-/* Not-small (anything bigger than your first breakpoint)
+/* small (Mobile dude)
    ========================================================================== */
 
 @include break(small) {
@@ -21,7 +21,7 @@
     display: block;
   }
 
-  #desktop {
+  #main-nav {
     display: none;
   }
 }

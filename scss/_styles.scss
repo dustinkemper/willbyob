@@ -30,13 +30,17 @@ a {
   }
 }
 
-::selection, ::-moz-selection {
+::-moz-selection {
   background: $chef-blue;
   color: #fff;
   text-shadow: none;
 }
 
-
+::selection {
+  background: $chef-blue;
+  color: #fff;
+  text-shadow: none;
+}
 
 
 /* ==========================================================================
@@ -69,13 +73,54 @@ header {
     }
   }
 
-  #desktop {
+  #main-nav {
 
     @include container;
     @include clearfix;
 
     #menu-dropdown {
+      position: absolute;
       display: none;
+      background-color: #fff;
+      border-top: 2px solid $chef-blue;
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      box-shadow: 0 2px 6px rgba( 0, 0, 0, .25);
+
+      &:before {
+        content: '';
+        width: 43px;
+        height: 4px;
+        background-color: $chef-blue;
+        display: block;
+        position: absolute;
+        margin-top: -6px;
+      }
+
+      li {
+        margin: 0;
+        border-bottom: 1px solid $light-gray;
+        display: block;
+        float: none;
+        
+        @include clearfix;
+
+        &:last-of-type { border: none;}
+
+        a {
+          display: block;
+          padding: 6px 16px;
+          line-height: 30px;
+          font-size: 1.2rem;
+          border: none;
+          &:hover { 
+            background-color: $chef-blue; 
+            font-weight: 400; 
+            color: #fff; 
+          }
+        }
+      }
     }
 
     ul{
@@ -87,8 +132,8 @@ header {
 
       li {
         float: left;
-        font-size: 1.2em;
-        padding-right: 4%;
+        font-size: 1.2rem;
+        margin-right: 4%;
         display: inline-block;
 
         a {
@@ -101,7 +146,7 @@ header {
 
       #ot-button {
         float: right;
-        padding: 0;
+        margin-right: 0;
       }
     }
   }
@@ -168,11 +213,12 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 
 .centered {
   display: block;
-  max-width: 50em;
+  max-width: 48em;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -180,6 +226,8 @@ header {
   text-align: center;
 
   h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
     color: #fff;
     text-shadow: 0 0 6px rgba(0, 0, 0, .35);
     margin-bottom: .5em;
@@ -207,42 +255,53 @@ header {
 
 .bottom {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   width: 100%;
 }
 
+
+footer {
+  @include container;
+}
+
 .row {
-  // max-width: 810px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-  @include container();
+  padding: 0 20px;
 
   h4 {
 
     color: #fff;
-    font-size: 16px;
+    display: inline-block;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 28px;
     text-align: center;
     text-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    vertical-align: top;
 
     &.addy {
-      @include span(2 of 2); 
+      padding-right: 16px;
+      border-right: 2px solid #fff;
     }
 
-    &.phone {
-      @include span(1 of 2);
+    span.phone {
+      padding-right: 16px;
+      padding-left: 16px;
+      border-right: 2px solid #fff;
     }
 
-    &.email {
-      @include span(1 of 2 last);
+    span.email {
+      padding-right: 16px;
+      padding-left: 16px;
+      border-right: 2px solid #fff;
+
+      a { font-size: 1em;}
     }
 
-    &.social {
-      @include span(2 of 2);
-      margin-top: 1.2em;
+    &.social { 
+      padding-left: 16px;
 
-      a { font-size: 2em; }
+      a { font-size: 2rem; }
     }
 
     a {

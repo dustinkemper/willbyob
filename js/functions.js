@@ -20,7 +20,9 @@
 			menuWidth: '19em'
 		});
 
-
+		$('.dropdown').hover(function(){
+			$(this).find('#menu-dropdown').slideToggle();
+		});
 	});
 	
 	

@@ -1,1 +1,1 @@
-!function(n){n(document).ready(function(){n(".menu-link").bigSlide({menu:"#mobile",menuWidth:"19em"})})}(window.jQuery);
+!function(n){n(document).ready(function(){n(".menu-link").bigSlide({menu:"#mobile",menuWidth:"19em"}),n(".dropdown").hover(function(){n(this).find("#menu-dropdown").slideToggle()})})}(window.jQuery);
