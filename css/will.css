@@ -820,7 +820,22 @@ header {
 
 /* ----- Open Table slide out div ----- */
 #open-table {
-  display: none; }
+  display: block;
+  width: 100%;
+  background-color: #372e5a;
+  padding: 20px 0 0;
+  z-index: 2; }
+  #open-table #OT_form {
+    height: auto;
+    margin: 0 auto; }
+  #open-table .OT_wrapper {
+    border: none; }
+  #open-table #OTButton a {
+    -webkit-transition: none;
+            transition: none; }
+  #open-table #OTButton a:hover {
+    -webkit-transition: none;
+            transition: none; }
 
 /* ----- Main content ----- */
 #main {

@@ -214,7 +214,23 @@ header {
 /* ----- Open Table slide out div ----- */
 
 #open-table {
-  display: none;
+  display: block;
+  width: 100%;
+  background-color: #372e5a;
+  padding: 20px 0 0;
+  z-index: 2;
+
+  #OT_form {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .OT_wrapper {
+    border: none;
+  }
+
+  #OTButton a { transition: none; }
+  #OTButton a:hover { transition: none; }
 }
 
 
