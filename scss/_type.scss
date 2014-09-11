@@ -53,26 +53,16 @@ blockquote {  font-size: $font-size-2; }
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  margin-left: .2em;
+
 }
 
-.icon-mail:before {
-  content: "\e603";
-}
-.icon-list:before {
-  content: "\e604";
-}
-.icon-twitter3:before {
-  content: "\e600";
-}
-.icon-twitter:before {
-  content: "\e605";
-}
-.icon-facebook:before {
-  content: "\e606";
-}
-.icon-facebook3:before {
-  content: "\e602";
-}
-.icon-instagram2:before {
-  content: "\e601";
-}
+.icon-phone:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-instagram:before { content: '\e802'; } /* '' */
+.icon-twitter-circled:before { content: '\e803'; } /* '' */
+.icon-facebook-circled:before { content: '\e804'; } /* '' */
+.icon-twitter:before { content: '\e805'; } /* '' */
+.icon-instagram-circled:before { content: '\e806'; } /* '' */
+.icon-facebook:before { content: '\e807'; } /* '' */

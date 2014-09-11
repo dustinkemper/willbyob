@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Imports
    ========================================================================== */
@@ -109,7 +110,6 @@ dfn, em {
  */
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -272,9 +272,8 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+       box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -288,7 +287,6 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -555,7 +553,7 @@ h1, .h1 {
   font-size: 64px; }
 
 h2, .h2 {
-  font-size: 48px; }
+  font-size: 40px; }
 
 h3, .h3 {
   font-size: 32px; }
@@ -573,7 +571,7 @@ h6, .h6 {
   font-size: 12px; }
 
 blockquote {
-  font-size: 48px; }
+  font-size: 40px; }
 
 /* Fonts
    ========================================================================== */
@@ -593,29 +591,41 @@ blockquote {
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: .2em; }
 
+.icon-phone:before {
+  content: '\e800'; }
+
+/* '' */
 .icon-mail:before {
-  content: "\e603"; }
+  content: '\e801'; }
 
-.icon-list:before {
-  content: "\e604"; }
+/* '' */
+.icon-instagram:before {
+  content: '\e802'; }
 
-.icon-twitter3:before {
-  content: "\e600"; }
+/* '' */
+.icon-twitter-circled:before {
+  content: '\e803'; }
 
+/* '' */
+.icon-facebook-circled:before {
+  content: '\e804'; }
+
+/* '' */
 .icon-twitter:before {
-  content: "\e605"; }
+  content: '\e805'; }
 
+/* '' */
+.icon-instagram-circled:before {
+  content: '\e806'; }
+
+/* '' */
 .icon-facebook:before {
-  content: "\e606"; }
+  content: '\e807'; }
 
-.icon-facebook3:before {
-  content: "\e602"; }
-
-.icon-instagram2:before {
-  content: "\e601"; }
-
+/* '' */
 /* ==========================================================================
    Base styles
    ========================================================================== */
@@ -632,16 +642,19 @@ body {
 
 a {
   text-decoration: none;
-  color: #272727;
+  color: #1b213c;
   cursor: pointer;
   font-weight: 400;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear; }
+  -webkit-transition: all .1s linear;
+          transition: all .1s linear; }
   a:hover {
     color: #283891;
     font-weight: 400;
-    -webkit-transition: all .2s linear;
-    transition: all .2s linear; }
+    -webkit-transition: all .1s linear;
+            transition: all .1s linear; }
+
+p {
+  margin-bottom: 20px; }
 
 ::-moz-selection {
   background: #283891;
@@ -656,19 +669,25 @@ a {
 .push {
   position: relative; }
 
+.spacer {
+  display: block;
+  background-color: #283891;
+  width: 60px;
+  height: 4px;
+  margin: 3em auto; }
+
 /* ==========================================================================
    Site styles
    ========================================================================== */
 header {
-  position: relative;
+  position: fixed !important;
+  top: 0;
   height: 155px;
   width: 100%;
   margin: 0;
-  z-index: 2;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background: url("../img/willbyob-logo.svg") no-repeat center center white;
-  -webkit-background-size: auto 95px;
+  background: url("../img/willbyob-logo.svg") no-repeat center center #fff;
   background-size: auto 95px; }
   header h1 a {
     position: absolute;
@@ -702,7 +721,6 @@ header {
       padding: 0;
       margin: 0;
       margin-top: 10px;
-      -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); }
       header #main-nav #menu-dropdown:before {
         content: '';
@@ -787,7 +805,7 @@ header {
     width: 100%;
     background-color: #1b213c; }
     #mobile ul li {
-      color: white;
+      color: #fff;
       display: block;
       float: none;
       font-size: 1.5em;
@@ -800,24 +818,46 @@ header {
         #mobile ul li a:hover {
           color: #8fa2f7; }
 
+/* ----- Open Table slide out div ----- */
 #open-table {
   display: none; }
 
+/* ----- Main content ----- */
 #main {
   height: 100%;
-  margin-top: -155px;
-  background: url("../img/p3optim.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  background-size: cover; }
+  height: 100vh;
+  background: url("../img/optimized/table-setting1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  z-index: 3; }
+
+#info {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  height: 100vh;
+  z-index: 2; }
+  #info:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  #info:before, #info:after {
+    content: "";
+    display: table; }
+  #info:after {
+    clear: both; }
 
 .centered {
   display: block;
+  background-color: rgba(27, 33, 60, 0.85);
+  border-radius: 2px;
+  padding: 10px 10px 20px;
   max-width: 48em;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+          transform: translateY(-40%);
   margin: 0 auto;
   text-align: center; }
   .centered h2 {
@@ -836,22 +876,34 @@ header {
       content: '';
       display: block;
       width: 20px;
-      height: 4px;
+      height: 2px;
       background-color: #fff;
       margin: 0 auto;
       margin-top: .7em; }
 
 #content {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  #content:after {
-    content: " ";
-    display: block;
-    clear: both; }
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  display: block;
+  margin-top: 16em; }
+  #content h4 {
+    color: #283891; }
+    #content h4 span {
+      display: inline-block; }
+    #content h4.social {
+      display: block;
+      font-size: 40px;
+      padding: 10px;
+      vertical-align: middle; }
+    #content h4 a {
+      color: #283891; }
+    #content h4 a:hover {
+      color: #8fa2f7; }
   #content .menu-title {
     background: url(../img/p1.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
     background-size: cover;
     font-family: 'Source Sans Pro', Arial, sans-serif;
     height: 200px;
@@ -874,7 +926,7 @@ header {
         content: '';
         display: block;
         margin: 30px auto;
-        border-bottom: 1px solid #888888;
+        border-bottom: 1px solid #888;
         width: 60px; }
     #content .menu-1 .dish {
       line-height: 30px;
@@ -889,6 +941,36 @@ header {
     #content .menu-1 .dessert {
       padding: 0 30px;
       margin-bottom: 60px; }
+
+#gallery {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  height: 100vh;
+  z-index: 1; }
+  #gallery:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  #gallery:before, #gallery:after {
+    content: "";
+    display: table; }
+  #gallery:after {
+    clear: both; }
+  #gallery #content ul.instagram {
+    margin: 0;
+    padding: 0; }
+    #gallery #content ul.instagram ul li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+      width: 200px; }
+    #gallery #content ul.instagram ul li img {
+      display: block;
+      width: 100%;
+      height: auto; }
 
 .bottom {
   position: absolute;
@@ -953,14 +1035,40 @@ footer {
 /* small (Mobile dude)
    ========================================================================== */
 @media screen and (max-width: 48em) {
+  header {
+    height: 90px;
+    background-size: auto 70px;
+    -webkit-transition: all .1s ease;
+            transition: all .1s ease; }
+    header h1 a {
+      height: 90px;
+      top: 0; }
+
   #mobile {
     display: block; }
 
   .menu-link {
-    display: block; }
+    display: block;
+    padding: 20px; }
 
   #main-nav {
-    display: none; } }
+    display: none; }
+
+  .centered {
+    margin: 0 20px; }
+
+  #info {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto; }
+    #info:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #info #content {
+      margin-top: 10em; }
+      #info #content p {
+        font-size: 18px; } }
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
    ========================================================================== */
 /* Large - only targets 2nd breakpoint. Styles do not extend past 64em.

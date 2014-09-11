@@ -13,16 +13,39 @@
 
 @include break(small) {
 
+  header {
+    height: 90px;
+    background-size: auto 70px;
+    transition: all .1s ease;
+
+    h1 a { height: 90px; top: 0;}
+  }
+  
   #mobile {
     display: block;
   }
 
   .menu-link {
     display: block;
+    padding: 20px;
   }
 
   #main-nav {
     display: none;
+  }
+
+  .centered {
+    margin: 0 20px; 
+  }
+
+  #info {
+    @include container(85%);
+
+    #content {
+      margin-top: 10em;
+
+      p { font-size: 18px; }
+    }
   }
 }
 

@@ -23,6 +23,13 @@
 		$('.dropdown').hover(function(){
 			$(this).find('#menu-dropdown').slideToggle();
 		});
+
+
+		$('.instagram').instagramLite({
+	    clientID: '1065746.134e713.5f2003dccf7f41b29d786e8af87623e1',
+	    username: 'tenfoldvisual'
+	    
+		});
 	});
 	
 	

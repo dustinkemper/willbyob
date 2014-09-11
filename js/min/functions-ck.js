@@ -1,1 +1,1 @@
-!function(n){n(document).ready(function(){n(".menu-link").bigSlide({menu:"#mobile",menuWidth:"19em"}),n(".dropdown").hover(function(){n(this).find("#menu-dropdown").slideToggle()})})}(window.jQuery);
+!function($){$(document).ready(function(){$(".menu-link").bigSlide({menu:"#mobile",menuWidth:"19em"}),$(".dropdown").hover(function(){$(this).find("#menu-dropdown").slideToggle()}),$(".instagram").instagramLite({clientID:"1065746.134e713.5f2003dccf7f41b29d786e8af87623e1",username:"tenfoldvisual"})})}(window.jQuery);
