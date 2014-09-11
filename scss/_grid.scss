@@ -35,19 +35,25 @@
   }
 
   .centered {
-    margin: 0 20px; 
+    margin: 0 20px;
+  }
+
+  #content {
+    padding-top: 120px;
+    margin: 0 16px; 
   }
 
   #info {
-    // @include container(85%);
+    height: 100%;
+    height: 100vh;
 
-      p { font-size: 18px; }
-    
+    p { font-size: 18px; }
   }
 
-  .instagram li {
-    @include span(6 of 12);
+  #gallery {
+    padding-top: 90px;
   }
+
 }
 
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
