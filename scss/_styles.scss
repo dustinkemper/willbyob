@@ -231,23 +231,15 @@ header {
   background-size: cover;
   z-index: 3;
 
-}
-
-#info {
-  @include container(750px);
-  @include clearfix;
-
-  height: 100%;
-  height: 100vh;
-  z-index: 2;
-
+  .centered {
+    background-color: rgba(27, 33, 60, .85);
+    border-radius: 2px;
+    padding: 10px 10px 20px;
+  }
 }
 
 .centered {
   display: block;
-  background-color: rgba(27, 33, 60, .85);
-  border-radius: 2px;
-  padding: 10px 10px 20px;
   max-width: 48em;
   position: relative;
   top: 50%;
@@ -283,12 +275,21 @@ header {
   }
 }
 
+#info {
+  @include container(750px);
+  @include clearfix;
+
+  height: 100%;
+  height: 100vh;
+  margin-top: 1.5em;
+  margin-bottom: 4em;
+  z-index: 2;
+}
+
 #content {
-  @include span(1 of 1 center);
   text-align: center;
   display: block;
-  margin-top: 16em; 
-
+  
   h4 {
     color: $chef-blue;
 
@@ -361,27 +362,23 @@ header {
 }
 
 #gallery {
-  @include container(750px);
-  @include clearfix;
-
-  height: 100%;
-  height: 100vh;
   z-index: 1; 
+  background-color: $navy;
 
+  .instagram {
+    @include container(2000px center);
+    @include layout(12 0);
 
-  #content ul.instagram {
-    margin: 0;
-    padding: 0;
-
-    ul li {
+    li {
+      @include span(3 of 12);
       list-style: none;
-      margin: 0;
-      padding: 0;
-      float: left;
-      width: 200px;
+
+      @include break(small) { 
+        @include span(6 of 12);
+      }
     }
 
-    ul li img {
+    li img {
       display: block;
       width: 100%;
       height: auto;
@@ -393,62 +390,4 @@ header {
   position: absolute;
   bottom: 30px;
   width: 100%;
-}
-
-
-footer {
-  @include container;
-}
-
-.row {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  h4 {
-
-    color: #fff;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    text-shadow: 0 0 6px rgba(0, 0, 0, .25);
-    vertical-align: top;
-
-    &.addy {
-      padding-right: 16px;
-      border-right: 2px solid #fff;
-    }
-
-    span.phone {
-      padding-right: 16px;
-      padding-left: 16px;
-      border-right: 2px solid #fff;
-    }
-
-    span.email {
-      padding-right: 16px;
-      padding-left: 16px;
-      border-right: 2px solid #fff;
-
-      a { font-size: 1em;}
-    }
-
-    &.social { 
-      padding-left: 16px;
-
-      a { font-size: 2rem; }
-    }
-
-    a {
-      color: #fff;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      text-align: center;
-      text-shadow: 0 0 6px rgba(0, 0, 0, .25);
-      &:hover { color: $sky; }
-
-    }
-  }
 }

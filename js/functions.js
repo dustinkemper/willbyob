@@ -23,13 +23,29 @@
 		$('.dropdown').hover(function(){
 			$(this).find('#menu-dropdown').slideToggle();
 		});
-
-
+		
 		$('.instagram').instagramLite({
-	    clientID: '1065746.134e713.5f2003dccf7f41b29d786e8af87623e1',
-	    username: 'willbyob'
-
+			username: 'willbyob',
+			clientID: '134e71304889432cb30d25c66c05a5b3',
+			urls: true,
+			limit: 16,
+			error: function(errorCode, errorMessage) {
+			
+				console.log('There was an error');
+			
+				if(errorCode && errorMessage) {
+			
+					alert(errorCode +': '+ errorMessage);
+				
+				}
+				
+			},
+			success: function() {
+				console.log('The request was successful!');
+			}
 		});
+		
+	
 	});
 	
 	

@@ -829,29 +829,13 @@ header {
   background: url("../img/optimized/table-setting1.jpg") no-repeat center center fixed;
   background-size: cover;
   z-index: 3; }
-
-#info {
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  height: 100vh;
-  z-index: 2; }
-  #info:after {
-    content: " ";
-    display: block;
-    clear: both; }
-  #info:before, #info:after {
-    content: "";
-    display: table; }
-  #info:after {
-    clear: both; }
+  #main .centered {
+    background-color: rgba(27, 33, 60, 0.85);
+    border-radius: 2px;
+    padding: 10px 10px 20px; }
 
 .centered {
   display: block;
-  background-color: rgba(27, 33, 60, 0.85);
-  border-radius: 2px;
-  padding: 10px 10px 20px;
   max-width: 48em;
   position: relative;
   top: 50%;
@@ -881,14 +865,28 @@ header {
       margin: 0 auto;
       margin-top: .7em; }
 
+#info {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  height: 100vh;
+  margin-top: 1.5em;
+  margin-bottom: 4em;
+  z-index: 2; }
+  #info:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  #info:before, #info:after {
+    content: "";
+    display: table; }
+  #info:after {
+    clear: both; }
+
 #content {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   text-align: center;
-  display: block;
-  margin-top: 16em; }
+  display: block; }
   #content h4 {
     color: #283891; }
     #content h4 span {
@@ -943,31 +941,25 @@ header {
       margin-bottom: 60px; }
 
 #gallery {
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  height: 100vh;
-  z-index: 1; }
-  #gallery:after {
-    content: " ";
-    display: block;
-    clear: both; }
-  #gallery:before, #gallery:after {
-    content: "";
-    display: table; }
-  #gallery:after {
-    clear: both; }
-  #gallery #content ul.instagram {
-    margin: 0;
-    padding: 0; }
-    #gallery #content ul.instagram ul li {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+  z-index: 1;
+  background-color: #1b213c; }
+  #gallery .instagram {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto; }
+    #gallery .instagram:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #gallery .instagram li {
+      width: 25%;
       float: left;
-      width: 200px; }
-    #gallery #content ul.instagram ul li img {
+      list-style: none; }
+      @media screen and (max-width: 48em) {
+        #gallery .instagram li {
+          width: 50%;
+          float: left; } }
+    #gallery .instagram li img {
       display: block;
       width: 100%;
       height: auto; }
@@ -976,54 +968,6 @@ header {
   position: absolute;
   bottom: 30px;
   width: 100%; }
-
-footer {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  footer:after {
-    content: " ";
-    display: block;
-    clear: both; }
-
-.row {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px; }
-  .row h4 {
-    color: #fff;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    vertical-align: top; }
-    .row h4.addy {
-      padding-right: 16px;
-      border-right: 2px solid #fff; }
-    .row h4 span.phone {
-      padding-right: 16px;
-      padding-left: 16px;
-      border-right: 2px solid #fff; }
-    .row h4 span.email {
-      padding-right: 16px;
-      padding-left: 16px;
-      border-right: 2px solid #fff; }
-      .row h4 span.email a {
-        font-size: 1em; }
-    .row h4.social {
-      padding-left: 16px; }
-      .row h4.social a {
-        font-size: 2rem; }
-    .row h4 a {
-      color: #fff;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      text-align: center;
-      text-shadow: 0 0 6px rgba(0, 0, 0, 0.25); }
-      .row h4 a:hover {
-        color: #8fa2f7; }
 
 /* ==========================================================================
    Media Queries
@@ -1057,18 +1001,12 @@ footer {
   .centered {
     margin: 0 20px; }
 
-  #info {
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto; }
-    #info:after {
-      content: " ";
-      display: block;
-      clear: both; }
-    #info #content {
-      margin-top: 10em; }
-      #info #content p {
-        font-size: 18px; } }
+  #info p {
+    font-size: 18px; }
+
+  .instagram li {
+    width: 50%;
+    float: left; } }
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
    ========================================================================== */
 /* Large - only targets 2nd breakpoint. Styles do not extend past 64em.

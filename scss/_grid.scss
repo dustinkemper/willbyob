@@ -39,13 +39,14 @@
   }
 
   #info {
-    @include container(85%);
-
-    #content {
-      margin-top: 10em;
+    // @include container(85%);
 
       p { font-size: 18px; }
-    }
+    
+  }
+
+  .instagram li {
+    @include span(6 of 12);
   }
 }
 
