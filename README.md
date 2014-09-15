@@ -6,9 +6,4 @@ An attempt at creating a static website totally from scratch using modern web de
 
 >The important thing is that I'm learning.
 
-I intend to use:
-
-* SASS, Bourbon, Neat
-* Statmic CMS (for easy client updates)
-* mobile responsive custom theme
 
