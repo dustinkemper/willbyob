@@ -14,11 +14,7 @@
 @include break(small) {
 
   header {
-    height: 90px;
-    background-size: auto 70px;
     transition: all .1s ease;
-
-    h1 a { height: 90px; top: 0;}
   }
   
   #mobile {
@@ -26,8 +22,9 @@
   }
 
   .menu-link {
+    // width: 40px;
     display: block;
-    padding: 20px;
+    // padding: 20px;
   }
 
   #main-nav {

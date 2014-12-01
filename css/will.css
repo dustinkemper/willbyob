@@ -634,10 +634,11 @@ html, body {
   width: 100%; }
 
 body {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: 'Crimson Text', Georgia, serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: #272727;
+  background: #283891;
   -webkit-font-smoothing: antialiased; }
 
 a {
@@ -679,108 +680,39 @@ p {
 /* ==========================================================================
    Site styles
    ========================================================================== */
-header {
-  position: fixed !important;
-  top: 0;
-  height: 155px;
-  width: 100%;
-  margin: 0;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  background: url("../img/willbyob-logo.svg") no-repeat center center #fff;
-  background-size: auto 95px; }
-  header h1 a {
-    position: absolute;
-    display: block;
-    height: 95px;
-    width: 150px;
-    top: 40px;
-    right: 50%;
-    margin-right: -65px;
-    cursor: pointer; }
-    header h1 a span {
-      display: none; }
-  header #main-nav {
-    max-width: 100%;
+header #main-nav {
+  padding-top: 20px; }
+  header #main-nav ul {
+    max-width: 1000px;
     margin-left: auto;
-    margin-right: auto; }
-    header #main-nav:after {
+    margin-right: auto;
+    padding: 0 30px; }
+    header #main-nav ul:after {
       content: " ";
       display: block;
       clear: both; }
-    header #main-nav:before, header #main-nav:after {
+    header #main-nav ul:before, header #main-nav ul:after {
       content: "";
       display: table; }
-    header #main-nav:after {
+    header #main-nav ul:after {
       clear: both; }
-    header #main-nav #menu-dropdown {
-      position: absolute;
-      display: none;
-      background-color: #fff;
-      border-top: 2px solid #283891;
-      padding: 0;
-      margin: 0;
-      margin-top: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); }
-      header #main-nav #menu-dropdown:before {
-        content: '';
-        width: 43px;
-        height: 4px;
-        background-color: #283891;
-        display: block;
-        position: absolute;
-        margin-top: -6px; }
-      header #main-nav #menu-dropdown li {
-        margin: 0;
-        border-bottom: 1px solid #ebebeb;
-        display: block;
-        float: none; }
-        header #main-nav #menu-dropdown li:before, header #main-nav #menu-dropdown li:after {
-          content: "";
-          display: table; }
-        header #main-nav #menu-dropdown li:after {
-          clear: both; }
-        header #main-nav #menu-dropdown li:last-of-type {
-          border: none; }
-        header #main-nav #menu-dropdown li a {
-          display: block;
-          padding: 6px 16px;
-          line-height: 30px;
-          font-size: 1.2rem;
-          border: none; }
-          header #main-nav #menu-dropdown li a:hover {
-            background-color: #283891;
-            font-weight: 400;
-            color: #fff; }
-    header #main-nav ul {
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 30px;
-      margin-top: 100px; }
-      header #main-nav ul:after {
-        content: " ";
-        display: block;
-        clear: both; }
-      header #main-nav ul:before, header #main-nav ul:after {
-        content: "";
-        display: table; }
-      header #main-nav ul:after {
-        clear: both; }
-      header #main-nav ul li {
-        float: left;
-        font-size: 1.2rem;
-        margin-right: 4%;
-        display: inline-block; }
-        header #main-nav ul li a {
-          padding: 16px 0;
-          border-bottom: 1px solid transparent; }
-          header #main-nav ul li a:hover {
-            border-bottom: 4px solid #283891;
-            padding: 6px 0; }
-      header #main-nav ul #ot-button {
-        float: right;
-        margin-right: 0; }
+    header #main-nav ul li {
+      float: left;
+      margin-right: 20px;
+      display: inline-block; }
+      header #main-nav ul li a {
+        color: #fff;
+        font-family: 'Raleway', Geneva, sans-serif;
+        font-size: 1.3em;
+        text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.2);
+        padding: 16px 0;
+        border-bottom: 1px solid transparent; }
+        header #main-nav ul li a:hover {
+          border-bottom: 2px solid #fff;
+          padding: 6px 0; }
+    header #main-nav ul .ot-button {
+      float: right;
+      margin-right: 0; }
 
 /* -----  Mobile slide-out nav menu  ----- */
 .panel {
@@ -788,13 +720,21 @@ header {
   left: -19em;
   /*left or right and the width of your navigation panel*/
   width: 19em;
-  /*should match the above value*/ }
+  /*should match the above value*/
+  z-index: 50; }
 
 .menu-link {
-  font-size: 2.2em;
+  color: #fff;
+  display: block;
+  line-height: 40px;
+  width: 40px;
+  padding: 20px;
+  font-size: 40px;
   -webkit-font-smoothing: antialiased;
-  display: none;
-  padding: 50px 30px 20px; }
+  display: none; }
+  .menu-link:hover {
+    color: #fff;
+    opacity: .7; }
 
 #mobile {
   display: none; }
@@ -818,36 +758,55 @@ header {
         #mobile ul li a:hover {
           color: #8fa2f7; }
 
-/* ----- Open Table slide out div ----- */
-#open-table {
-  display: block;
-  width: 100%;
-  background-color: #372e5a;
-  padding: 20px 0 0;
-  z-index: 2; }
-  #open-table #OT_form {
-    height: auto;
-    margin: 0 auto; }
-  #open-table .OT_wrapper {
-    border: none; }
-  #open-table #OTButton a {
-    -webkit-transition: none;
-            transition: none; }
-  #open-table #OTButton a:hover {
-    -webkit-transition: none;
-            transition: none; }
-
 /* ----- Main content ----- */
-#main {
+.content {
   height: 100%;
   height: 100vh;
-  background: url("../img/optimized/table-setting1.jpg") no-repeat center center fixed;
-  background-size: cover;
-  z-index: 3; }
-  #main .centered {
-    background-color: rgba(27, 33, 60, 0.85);
-    border-radius: 2px;
-    padding: 10px 10px 20px; }
+  background: url("../img/dish1.jpg") center bottom fixed #283891;
+  background-size: cover; }
+  .content .overlay {
+    height: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25); }
+  .content h1 {
+    position: relative;
+    top: 32%;
+    -webkit-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+            transform: translateY(-40%);
+    margin: 0 auto;
+    text-align: center; }
+    .content h1 span {
+      display: none; }
+    .content h1 .logo {
+      position: relative;
+      max-width: 500px;
+      padding-left: 18px; }
+  .content .footer {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 30px; }
+    .content .footer ul {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 30px;
+      text-align: center; }
+      .content .footer ul:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      .content .footer ul li {
+        display: inline-block;
+        font-size: 1.5em;
+        padding-right: 20px; }
+        .content .footer ul li:last-of-type {
+          padding-right: 0; }
+    .content .footer a {
+      color: #fff; }
+      .content .footer a:hover {
+        opacity: .6; }
 
 .centered {
   display: block;
@@ -860,7 +819,7 @@ header {
   margin: 0 auto;
   text-align: center; }
   .centered h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Raleway', Geneva, sans-serif;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
@@ -941,11 +900,6 @@ header {
       width: 100%;
       height: auto; }
 
-.bottom {
-  position: absolute;
-  bottom: 30px;
-  width: 100%; }
-
 /* ==========================================================================
    Media Queries
 
@@ -957,20 +911,14 @@ header {
    ========================================================================== */
 @media screen and (max-width: 48em) {
   header {
-    height: 90px;
-    background-size: auto 70px;
     -webkit-transition: all .1s ease;
             transition: all .1s ease; }
-    header h1 a {
-      height: 90px;
-      top: 0; }
 
   #mobile {
     display: block; }
 
   .menu-link {
-    display: block;
-    padding: 20px; }
+    display: block; }
 
   #main-nav {
     display: none; }
