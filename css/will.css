@@ -542,10 +542,10 @@ input[type=button] {
 /* Copy
    ========================================================================== */
 p {
-  font-size: 24px; }
+  font-size: 20px; }
 
 .intro {
-  font-size: 32px; }
+  font-size: 28px; }
 
 /* Headings
    ========================================================================== */
@@ -553,13 +553,13 @@ h1, .h1 {
   font-size: 64px; }
 
 h2, .h2 {
-  font-size: 40px; }
+  font-size: 36px; }
 
 h3, .h3 {
-  font-size: 32px; }
+  font-size: 28px; }
 
 h4, .h4 {
-  font-size: 24px; }
+  font-size: 20px; }
 
 h5, .h5 {
   font-size: 16px; }
@@ -571,7 +571,7 @@ h6, .h6 {
   font-size: 12px; }
 
 blockquote {
-  font-size: 40px; }
+  font-size: 36px; }
 
 /* Fonts
    ========================================================================== */
@@ -638,12 +638,11 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #272727;
-  background: #283891;
   -webkit-font-smoothing: antialiased; }
 
 a {
   text-decoration: none;
-  color: #1b213c;
+  color: #888;
   cursor: pointer;
   font-weight: 400;
   -webkit-transition: all .1s linear;
@@ -680,6 +679,18 @@ p {
 /* ==========================================================================
    Site styles
    ========================================================================== */
+header.info {
+  background: url("../img/info.jpg") center -200px fixed #283891;
+  background-size: cover;
+  height: 400px; }
+header.menu {
+  background: url("../img/kitchen.jpg") center -140px fixed #283891;
+  background-size: cover;
+  height: 400px; }
+header.gallery {
+  background: url("../img/optimized/table-setting1.jpg") center -140px fixed #283891;
+  background-size: cover;
+  height: 400px; }
 header #main-nav {
   padding-top: 20px; }
   header #main-nav ul {
@@ -702,7 +713,7 @@ header #main-nav {
       display: inline-block; }
       header #main-nav ul li a {
         color: #fff;
-        font-family: 'Raleway', Geneva, sans-serif;
+        font-family: 'Raleway', Arial, sans-serif;
         font-size: 1.3em;
         text-shadow: 0px 0px 22px rgba(0, 0, 0, 0.2);
         padding: 16px 0;
@@ -713,6 +724,15 @@ header #main-nav {
     header #main-nav ul .ot-button {
       float: right;
       margin-right: 0; }
+header .nav-logo {
+  display: block;
+  width: 120px;
+  position: relative;
+  -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+          transform: translateY(-40%);
+  margin: 0 auto;
+  text-align: center; }
 
 /* -----  Mobile slide-out nav menu  ----- */
 .panel {
@@ -759,16 +779,20 @@ header #main-nav {
           color: #8fa2f7; }
 
 /* ----- Main content ----- */
-.content {
+.wrapper {
   height: 100%;
-  height: 100vh;
-  background: url("../img/dish1.jpg") center bottom fixed #283891;
-  background-size: cover; }
-  .content .overlay {
+  height: 100vh; }
+  .wrapper.main {
+    background: url("../img/dish1.jpg") center bottom fixed #283891;
+    background-size: cover; }
+  .wrapper .overlay {
     height: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.25); }
-  .content h1 {
+    .wrapper .overlay.blue {
+      background: rgba(40, 56, 145, 0.8);
+      max-height: 400px; }
+  .wrapper h1 {
     position: relative;
     top: 32%;
     -webkit-transform: translateY(-40%);
@@ -776,37 +800,148 @@ header #main-nav {
             transform: translateY(-40%);
     margin: 0 auto;
     text-align: center; }
-    .content h1 span {
+    .wrapper h1 span {
       display: none; }
-    .content h1 .logo {
+    .wrapper h1 .logo {
       position: relative;
       max-width: 500px;
       padding-left: 18px; }
-  .content .footer {
+  .wrapper h2 {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: "Crimson Text", Georgia, serif; }
+  .wrapper .footer {
     color: #fff;
     position: absolute;
     width: 100%;
     bottom: 30px; }
-    .content .footer ul {
+    .wrapper .footer ul {
       max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
       padding: 0 30px;
       text-align: center; }
-      .content .footer ul:after {
+      .wrapper .footer ul:after {
         content: " ";
         display: block;
         clear: both; }
-      .content .footer ul li {
+      .wrapper .footer ul li {
         display: inline-block;
-        font-size: 1.5em;
+        font-size: 1.7em;
         padding-right: 20px; }
-        .content .footer ul li:last-of-type {
+        .wrapper .footer ul li:last-of-type {
           padding-right: 0; }
-    .content .footer a {
+    .wrapper .footer a {
       color: #fff; }
-      .content .footer a:hover {
+      .wrapper .footer a:hover {
         opacity: .6; }
+
+footer {
+  background-color: #283891;
+  color: #fff;
+  width: 100%;
+  padding: 30px 0; }
+  footer ul {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+    text-align: center; }
+    footer ul:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    footer ul li {
+      display: inline-block;
+      font-size: 1.7em;
+      padding-right: 20px; }
+      footer ul li:last-of-type {
+        padding-right: 0; }
+  footer a {
+    color: #fff; }
+    footer a:hover {
+      color: #fff;
+      opacity: .6; }
+  footer .social {
+    margin: 20px auto 0;
+    display: block;
+    padding: 0;
+    font-size: 34px; }
+    footer .social a {
+      margin-right: 40px; }
+    footer .social a:last-of-type {
+      margin: 0; }
+
+.content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 20px; }
+  .content:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .content.menus {
+    padding: 50px 0 0; }
+  .content .hours {
+    text-align: center;
+    color: #888;
+    margin-bottom: 80px; }
+    .content .hours h3 {
+      color: #283891;
+      margin-bottom: 16px; }
+  .content h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #283891;
+    text-transform: uppercase;
+    text-align: center; }
+    .content h4:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 20px;
+      background-color: #283891;
+      text-align: center;
+      margin: 10px auto 0; }
+  .content h5 {
+    font-style: italic;
+    font-size: 20px;
+    color: #888; }
+  .content .btn {
+    width: 180px;
+    height: 120px;
+    margin-right: 14px;
+    float: left;
+    padding: 40px 20px 0;
+    border: 2px solid #283891;
+    text-align: center; }
+    .content .btn:before, .content .btn:after {
+      content: "";
+      display: table; }
+    .content .btn:after {
+      clear: both; }
+    .content .btn:last-of-type {
+      margin-right: 0; }
+    .content .btn:hover {
+      background-color: #283891; }
+      .content .btn:hover h4 {
+        color: #fff; }
+      .content .btn:hover h4:after {
+        background-color: #fff; }
+      .content .btn:hover h5 {
+        color: #fff; }
+
+.chef-pic {
+  float: left;
+  display: block;
+  width: 315px;
+  padding: 20px 30px 0 0; }
 
 .centered {
   display: block;
@@ -819,7 +954,7 @@ header #main-nav {
   margin: 0 auto;
   text-align: center; }
   .centered h2 {
-    font-family: 'Raleway', Geneva, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
@@ -876,26 +1011,25 @@ header #main-nav {
     #content h4 a:hover {
       color: #8fa2f7; }
 
-#gallery {
-  padding-top: 150px;
+.gallery {
   z-index: 1; }
-  #gallery .instagram {
-    max-width: 2000px;
+  .gallery .instagram {
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto; }
-    #gallery .instagram:after {
+    .gallery .instagram:after {
       content: " ";
       display: block;
       clear: both; }
-    #gallery .instagram li {
+    .gallery .instagram li {
       width: 25%;
       float: left;
       list-style: none; }
       @media screen and (max-width: 48em) {
-        #gallery .instagram li {
+        .gallery .instagram li {
           width: 50%;
           float: left; } }
-    #gallery .instagram li img {
+    .gallery .instagram li img {
       display: block;
       width: 100%;
       height: auto; }

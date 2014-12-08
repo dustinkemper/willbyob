@@ -12,14 +12,13 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: $black;
-  background: $chef-blue;
   -webkit-font-smoothing: antialiased;
 
 }
 
 a {
   text-decoration: none;
-  color: $navy;
+  color: #888;
   cursor: pointer;
   font-weight: 400;
   transition: all .1s linear;
@@ -31,7 +30,7 @@ a {
   }
 }
 
-p { margin-bottom: 20px;}
+p { margin-bottom: 20px; }
 
 ::-moz-selection {
   background: $chef-blue;
@@ -63,7 +62,23 @@ p { margin-bottom: 20px;}
    ========================================================================== */
 
 header {
+  &.info {
+    background: url("../img/info.jpg") center -200px fixed $chef-blue;
+    background-size: cover;
+    height: 400px;
+  }
   
+  &.menu {
+    background: url("../img/kitchen.jpg") center -140px fixed $chef-blue;
+    background-size: cover;
+    height: 400px;
+  }
+  &.gallery {
+    background: url("../img/optimized/table-setting1.jpg") center -140px fixed $chef-blue;
+    background-size: cover;
+    height: 400px;
+  }
+
   #main-nav {
     padding-top: 20px;
 
@@ -79,7 +94,7 @@ header {
 
         a {
           color: #fff;
-          font-family: 'Raleway', Geneva, sans-serif;
+          font-family: 'Raleway', Arial, sans-serif;
           font-size: 1.3em;
           text-shadow: 0px 0px 22px rgba(0,0,0,.2);
           padding: 16px 0;
@@ -94,6 +109,16 @@ header {
         margin-right: 0;
       }
     }
+  }
+
+  .nav-logo {
+    display: block;
+    width: 120px;
+    position: relative;
+    transform: translateY(-40%);
+    margin: 0 auto;
+    text-align: center;
+
   }
 }
 
@@ -148,16 +173,24 @@ header {
 
 /* ----- Main content ----- */
 
-.content {
+.wrapper {
   height: 100%;
   height: 100vh;
-  background: url("../img/dish1.jpg") center bottom fixed $chef-blue;
-  background-size: cover;
+
+  &.main {
+    background: url("../img/dish1.jpg") center bottom fixed $chef-blue;
+    background-size: cover;
+  }
 
   .overlay {
     height: 100%;
     height: 100vh;
     background: rgba(0,0,0,.25);
+
+    &.blue {
+      background: rgba(40,56,145,.8);
+      max-height: 400px;
+    }
   }
 
   h1 {
@@ -175,6 +208,17 @@ header {
     }
   }
 
+  h2 {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: "Crimson Text", Georgia, serif;
+  }
+
+
+
   .footer {
     color: #fff;
     position: absolute;
@@ -189,7 +233,7 @@ header {
 
       li { 
         display: inline-block;
-        font-size: 1.5em;
+        font-size: 1.7em;
         padding-right: 20px;
         &:last-of-type {padding-right: 0;}
       }
@@ -202,6 +246,117 @@ header {
   }
 }
 
+footer {
+  background-color: $chef-blue;
+  color: #fff;
+  width: 100%;
+  padding: 30px 0;
+  
+
+  ul {
+    @include container(1000px center);
+    padding: 0 30px;
+    text-align: center;
+
+    li { 
+      display: inline-block;
+      font-size: 1.7em;
+      padding-right: 20px;
+      &:last-of-type {padding-right: 0;}
+    }
+  }
+
+  a {
+    color: #fff;
+    &:hover {color: #fff; opacity: .6;}
+  }
+
+  .social {
+    margin: 20px auto 0;
+    display: block;
+    padding: 0;
+    font-size: 34px;
+    a {margin-right: 40px;}
+    a:last-of-type {margin: 0;}
+  }
+}
+
+.content {
+  @include container(700px);
+  padding: 50px 20px;
+
+  &.menus {
+    padding: 50px 0 0;
+  }
+
+  .hours {
+    text-align: center;
+    color: $medium-gray;
+    margin-bottom: 80px; 
+
+    h3 {
+      color: $chef-blue;
+      margin-bottom: 16px; 
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family: 'Raleway', Arial, sans-serif;
+    color: $chef-blue;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 20px;
+      background-color: $chef-blue;
+      text-align: center;
+      margin: 10px auto 0;
+    }
+
+  }
+
+  h5 {
+    font-style: italic;
+    font-size: 20px;
+    color: $medium-gray;
+  }
+
+  .btn {
+    width: 180px;
+    height: 120px;
+    margin-right: 14px;
+    float: left;
+    @include clearfix;
+    padding: 40px 20px 0;
+    border: 2px solid $chef-blue;
+    text-align: center;
+    &:last-of-type {margin-right:0;}
+    &:hover {
+      background-color: $chef-blue;
+      h4 {color: #fff;}
+      h4:after {background-color: #fff;}
+      h5 {color: #fff;}
+    }
+
+  }
+}
+
+.chef-pic {
+  float: left;
+  display: block;
+  width: 315px;
+  padding: 20px 30px 0 0;
+}
+
+
+// ================
+
 .centered {
   display: block;
   max-width: 48em;
@@ -212,7 +367,7 @@ header {
   text-align: center;
 
   h2 {
-    font-family: 'Raleway', Geneva, sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 0 6px rgba(0, 0, 0, .35);
@@ -326,12 +481,11 @@ header {
   // }
 }
 
-#gallery {
-  padding-top:150px;
+.gallery {
   z-index: 1; 
 
   .instagram {
-    @include container(2000px center);
+    @include container(100% center);
     @include layout(12 0);
 
     li {
