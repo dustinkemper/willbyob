@@ -12,43 +12,61 @@
    ========================================================================== */
 
 @include break(small) {
+  .wrapper {
 
-  header {
-    transition: all .1s ease;
+    #mobile {
+      display: block;
+    }
+
+    .menu-link {
+      display: block;
+    }
+
+    #main-nav {
+      display: none;
+    }
+
+    header {
+      height: 350px;
+
+      .nav-logo {
+        margin-top: -30px;
+      }
+
+      .overlay.blue {
+        max-height: 350px;
+      }
+    }
+
+    h1 .logo {
+      max-width: 65%;
+    }
+
+    h2 {
+      max-width: 480px;
+      font-size: 28px;
+      padding: 10px 30px;
+    }
+
+    .content {
+      padding: 50px 30px;
+
+      .hours h3 { font-size: 20px; }
+    }
+
+    .footer {
+      ul li { font-size: 1.4em; }
+    }
+
+    #gallery {
+      padding-top: 90px;
+    }
   }
-  
-  #mobile {
-    display: block;
-  }
 
-  .menu-link {
-    // width: 40px;
-    display: block;
-    // padding: 20px;
-  }
-
-  #main-nav {
-    display: none;
-  }
-
-  .centered {
-    margin: 0 20px;
-  }
-
-  #content {
-    padding-top: 120px;
-    margin: 0 16px; 
-  }
-
-  #info {
-    height: 100%;
-    height: 100vh;
-
-    p { font-size: 18px; }
-  }
-
-  #gallery {
-    padding-top: 90px;
+  .chef-pic {
+    float: none;
+    padding: 0 0 20px;
+    margin: 0 auto;
   }
 
 }
