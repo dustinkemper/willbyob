@@ -884,8 +884,6 @@ footer {
     content: " ";
     display: block;
     clear: both; }
-  .content.menus {
-    padding: 50px 0 0; }
   .content .hours {
     text-align: center;
     color: #888;
@@ -893,48 +891,64 @@ footer {
     .content .hours h3 {
       color: #283891;
       margin-bottom: 16px; }
-  .content h4 {
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-    font-family: 'Raleway', Arial, sans-serif;
-    color: #283891;
-    text-transform: uppercase;
-    text-align: center; }
-    .content h4:after {
-      content: '';
-      display: block;
-      height: 3px;
-      width: 20px;
-      background-color: #283891;
-      text-align: center;
-      margin: 10px auto 0; }
-  .content h5 {
-    font-style: italic;
-    font-size: 20px;
-    color: #888; }
-  .content .btn {
-    width: 180px;
-    height: 120px;
-    margin-right: 14px;
+
+h4 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #283891;
+  text-transform: uppercase;
+  text-align: center; }
+  h4:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 20px;
+    background-color: #283891;
+    text-align: center;
+    margin: 10px auto 0; }
+
+h5 {
+  font-style: italic;
+  font-size: 20px;
+  color: #888; }
+
+.menus {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px; }
+  .menus:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  .menus .btn {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    display: block;
+    width: 31.42857%;
     float: left;
-    padding: 40px 20px 0;
+    margin-right: 2.85714%;
+    padding: 40px 0;
     border: 2px solid #283891;
     text-align: center; }
-    .content .btn:before, .content .btn:after {
+    .menus .btn:before, .menus .btn:after {
       content: "";
       display: table; }
-    .content .btn:after {
+    .menus .btn:after {
       clear: both; }
-    .content .btn:last-of-type {
+    .menus .btn:last-of-type {
+      width: 31.42857%;
+      float: right;
       margin-right: 0; }
-    .content .btn:hover {
+    .menus .btn:hover {
       background-color: #283891; }
-      .content .btn:hover h4 {
+      .menus .btn:hover h4 {
         color: #fff; }
-      .content .btn:hover h4:after {
+      .menus .btn:hover h4:after {
         background-color: #fff; }
-      .content .btn:hover h5 {
+      .menus .btn:hover h5 {
         color: #fff; }
 
 .chef-pic {
@@ -1074,7 +1088,28 @@ footer {
   .chef-pic {
     float: none;
     padding: 0 0 20px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .menus {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto; }
+    .menus:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    .menus .btn {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 30px; }
+      .menus .btn:last-of-type {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0; } }
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
    ========================================================================== */
 /* Large - only targets 2nd breakpoint. Styles do not extend past 64em.

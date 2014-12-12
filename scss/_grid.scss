@@ -69,6 +69,17 @@
     margin: 0 auto;
   }
 
+  .menus {
+    @include container(300px);
+
+    .btn {
+      @include span(12);
+      margin-bottom: 30px;
+      &:last-of-type { @include span(12); margin-bottom: 0; }
+
+    }
+  }
+
 }
 
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
