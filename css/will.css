@@ -1064,7 +1064,7 @@ h5 {
     display: block; }
   .wrapper #main-nav {
     display: none; }
-  .wrapper header.info, .wrapper header.gallery {
+  .wrapper header.info, .wrapper header.gallery, .wrapper header.menu {
     height: 350px; }
   .wrapper header .nav-logo {
     margin-top: -30px; }
