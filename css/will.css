@@ -680,7 +680,7 @@ p {
    Site styles
    ========================================================================== */
 header.info {
-  background: url("../img/info.jpg") center -200px fixed #283891;
+  background: url("../img/info.jpg") center -300px fixed #283891;
   background-size: cover;
   height: 400px; }
 header.menu {
