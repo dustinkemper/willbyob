@@ -955,7 +955,7 @@ h5 {
   float: left;
   display: block;
   max-width: 315px;
-  padding: 20px 30px 0 0; }
+  padding: 20px 30px 50px 0; }
 
 .centered {
   display: block;
@@ -1064,12 +1064,20 @@ h5 {
     display: block; }
   .wrapper #main-nav {
     display: none; }
-  .wrapper header {
+  .wrapper header.info, .wrapper header.gallery {
     height: 350px; }
-    .wrapper header .nav-logo {
-      margin-top: -30px; }
-    .wrapper header .overlay.blue {
-      max-height: 350px; }
+  .wrapper header .nav-logo {
+    margin-top: -30px; }
+  .wrapper header .overlay.blue {
+    max-height: 350px; }
+  .wrapper h1 {
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    margin: 20px auto 0;
+    text-align: center; }
   .wrapper h1 .logo {
     max-width: 65%; }
   .wrapper h2 {
@@ -1080,12 +1088,18 @@ h5 {
     padding: 50px 30px; }
     .wrapper .content .hours h3 {
       font-size: 20px; }
-  .wrapper .footer ul li {
-    font-size: 1.4em; }
+  .wrapper .footer {
+    bottom: 0;
+    padding-bottom: 20px; }
+    .wrapper .footer ul {
+      padding: 0 20px; }
+    .wrapper .footer ul li {
+      font-size: 1.4em; }
   .wrapper #gallery {
     padding-top: 90px; }
 
   .chef-pic {
+    max-width: 260px;
     float: none;
     padding: 0 0 20px;
     margin: 0 auto; }
