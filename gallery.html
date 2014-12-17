@@ -37,9 +37,9 @@
   initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
   maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
   -->
-  <!-- Uncomment to use; use thoughtfully!
+  <!-- Uncomment to use; use thoughtfully! -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  -->
+ 
 
   <!-- Iconifier might be helpful for generating favicons and touch icons: http://iconifier.net -->
   <link rel="shortcut icon" href="img/favicon.ico" />
@@ -54,8 +54,8 @@
      - Transparency is not recommended (iOS will put a black BG behind the icon) -->
   
   <!-- concatenate and minify for production -->
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Crimson+Text:600,600italic,400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/jquery.navobile.css" />
   <link rel="stylesheet" href="css/will.css" />
@@ -86,54 +86,62 @@
 </head>
 
 <body>
+  <div class="wrapper">
 
-  <header class="push">
+    <header class="gallery push">
+    <div class="overlay blue">
 
-    <!-- off-canvas nav menu for mobile -->
-    <a href="#mobile" class="menu-link">&#9776;</a>
-    <nav id="mobile" class="panel" role="navigation">
+      <!-- off-canvas nav menu for mobile -->
+      <a href="#mobile" title="menu" class="menu-link">&#9776;</a>
+      <nav id="mobile" class="panel" role="navigation">
+        <ul>
+            <li><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
+            <li><a href="/info.html">Info</a></li>
+            <li><a href="https://www.dropbox.com/s/5hjbixi5zbkaqw9/dinner-menu.pdf?dl=0">Daily Menu</a></li>
+            <li><a href="https://www.dropbox.com/s/jzdi5sxne5qb45d/prixfixe-menu.pdf?dl=0">Sunday Prix Fixe</a></li>
+            <li><a href="https://www.dropbox.com/s/56qla4aiuwg46mn/tasting-menu.pdf?dl=0">Monthly Tasting</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="/info.html">INFO</a></li>
+          <li><a href="/menu.html">MENU</a></li>
+          <li><a href="/gallery.html">GALLERY</a></li>
+          <li class="ot-button"><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
+        </ul>
+      </nav>
+      <a class="nav-logo" href="/index.html"><img class="logo" src="img/willbyob-logo.svg"></a>
+      <h2 class="push">
+      A modern French-inspired BYOB, located on East Passyunk Avenue in the heart of South&nbsp;Philadelphia.
+      </h2>
+    </div>  
+    </header>
+
+    <section class="push">
+      <div class="gallery">
+        <ul class="instagram"></ul>
+      </div>
+    </section>
+    
+
+    <footer class="push">
       <ul>
-          <li><a href="#">Make a Reservation</a></li>
-          <li><a href="/#info">Info</a></li>
-          <li><a href="/daily-menu.html">Daily Menu</a></li>
-          <li><a href="/sunday-menu.html">Sunday Prix Fixe</a></li>
-          <li><a href="/tuesday-tasting.html">Tuesday Tastings</a></li>
-          <li><a href="/gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-
-
-    <nav id="main-nav">
-      <ul>
-        <li class="dropdown" >
-          <a href="#">Menu</a>
-          <ul id="menu-dropdown">
-            <li><a href="daily-menu.html">Daily Menu</a></li>
-            <li><a href="sunday-menu.html">Sunday Prix Fixe</a></li>
-            <li><a href="tuesday-tasting.html">Tuesday Tasting Menu</a></li>
-          </ul>
+        <li>1911&nbsp;East&nbsp;Passyunk&nbsp;Ave. Philadelphia,&nbsp;PA</li>
+        <li class="phone">(215)&nbsp;271-7683</li>
+        <li class="email"><a href="mailto:info@willbyob.com">info@willbyob.com</a></li>
+        <li class="social">
+          <a class="icon-facebook" href="http://www.facebook.com/WillBYOB1911"></a>
+          <a class="icon-twitter" href="http://twitter.com/willbyob"></a>
+          <a class="icon-instagram" href="http://instagram.com/willbyob"></a>
         </li>
-        <li><a href="/#info">Info</a></li>
-        <li><a href="/gallery.html">Gallery</a></li>
-        <li id="ot-button"><a href="#" alt="OpenTable Reservation">Make a Reservation</a></li>
       </ul>
-    </nav>
-    <h1>
-      <a href="/">
-        <span>Will BYOB</span>
-      </a>
-    </h1>
-    <div id="open-table" class="">
-      <script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=90274&restref=90274&bgcolor=372E5A&titlecolor=FFFFFF&subtitlecolor=DADADA&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_black.png&otlink=FFFFFF&icon=light&mode=wide&hover=1"></script>
-      <a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274" class="OT_ExtLink">Book on OpenTable website</a>
-    </div>
-  </header>
+    </footer>
 
+  </div>
   
-
-  <ul class="images"></ul>
-
-
 
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
      http://chromium.org/developers/how-tos/chrome-frame-getting-started -->

@@ -12,46 +12,86 @@
    ========================================================================== */
 
 @include break(small) {
+  .wrapper {
 
-  header {
-    height: 90px;
-    background-size: auto 70px;
-    transition: all .1s ease;
+    #mobile {
+      display: block;
+    }
 
-    h1 a { height: 90px; top: 0;}
+    .menu-link {
+      display: block;
+    }
+
+    #main-nav {
+      display: none;
+    }
+
+    header {
+      &.info, &.gallery, &.menu {
+        height: 350px;
+      }
+
+      .nav-logo {
+        margin-top: -30px;
+      }
+
+      .overlay.blue {
+        max-height: 350px;
+      }
+    }
+
+    h1 {
+      position: relative;
+      top: 0;
+      transform: translateY(0);
+      margin: 20px auto 0;
+      text-align: center;
+    }
+
+    h1 .logo {
+      max-width: 65%;
+    }
+
+    h2 {
+      max-width: 480px;
+      font-size: 28px;
+      padding: 10px 30px;
+    }
+
+    .content {
+      padding: 50px 30px;
+
+      .hours h3 { font-size: 20px; }
+    }
+
+    .footer {
+      bottom: 0;
+      padding-bottom: 20px;
+      ul { padding: 0 20px; }
+      ul li { font-size: 1.4em; }
+    }
+
+    #gallery {
+      padding-top: 90px;
+    }
   }
-  
-  #mobile {
-    display: block;
+
+  .chef-pic {
+    max-width: 260px;
+    float: none;
+    padding: 0 0 20px;
+    margin: 0 auto;
   }
 
-  .menu-link {
-    display: block;
-    padding: 20px;
-  }
+  .menus {
+    @include container(300px);
 
-  #main-nav {
-    display: none;
-  }
+    .btn {
+      @include span(12);
+      margin-bottom: 30px;
+      &:last-of-type { @include span(12); margin-bottom: 0; }
 
-  .centered {
-    margin: 0 20px;
-  }
-
-  #content {
-    padding-top: 120px;
-    margin: 0 16px; 
-  }
-
-  #info {
-    height: 100%;
-    height: 100vh;
-
-    p { font-size: 18px; }
-  }
-
-  #gallery {
-    padding-top: 90px;
+    }
   }
 
 }

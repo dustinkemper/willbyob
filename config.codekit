@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "17756",
+"creatorBuild": "18270",
 "files": {
 	"\/bower_components\/susy\/CONTRIBUTING.md": {
 		"enableFootnoteSupport": 0,
@@ -933,6 +933,72 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/Chef-Kearse.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122631,
+		"inputAbbreviatedPath": "\/img\/Chef-Kearse.jpg",
+		"outputAbbreviatedPath": "\/img\/Chef-Kearse.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/dish1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 584262,
+		"inputAbbreviatedPath": "\/img\/dish1.jpg",
+		"outputAbbreviatedPath": "\/img\/dish1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/dish2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 378202,
+		"inputAbbreviatedPath": "\/img\/dish2.jpg",
+		"outputAbbreviatedPath": "\/img\/dish2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/dish3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 501865,
+		"inputAbbreviatedPath": "\/img\/dish3.jpg",
+		"outputAbbreviatedPath": "\/img\/dish3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/dish4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 677332,
+		"inputAbbreviatedPath": "\/img\/dish4.jpg",
+		"outputAbbreviatedPath": "\/img\/dish4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/dish5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.02287e+06,
+		"inputAbbreviatedPath": "\/img\/dish5.jpg",
+		"outputAbbreviatedPath": "\/img\/dish5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/DSC_4267.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1010,6 +1076,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/info.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 497068,
+		"inputAbbreviatedPath": "\/img\/info.jpg",
+		"outputAbbreviatedPath": "\/img\/info.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/jquery.fs.naver-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1017,6 +1094,17 @@
 		"initialSize": 209,
 		"inputAbbreviatedPath": "\/img\/jquery.fs.naver-icon.png",
 		"outputAbbreviatedPath": "\/img\/jquery.fs.naver-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/kitchen.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 137676,
+		"inputAbbreviatedPath": "\/img\/kitchen.jpg",
+		"outputAbbreviatedPath": "\/img\/kitchen.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1197,6 +1285,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/index-old.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index-old.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1302,6 +1399,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/menu.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/menu.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
@@ -1864,6 +1970,10 @@
 			"flagValue": -1
 			},
 		"shelljs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"singleGroups": {
 			"active": 0,
 			"flagValue": -1
 			},

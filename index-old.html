@@ -37,9 +37,9 @@
 	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
 	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
 	-->
-	 <!-- Uncomment to use; use thoughtfully! -->
+	<!-- Uncomment to use; use thoughtfully!
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+	-->
 
 	<!-- Iconifier might be helpful for generating favicons and touch icons: http://iconifier.net -->
 	<link rel="shortcut icon" href="img/favicon.ico" />
@@ -86,52 +86,98 @@
 </head>
 
 <body>
-	<div class="wrapper main">
-	<div class="overlay">
 
-		<header class="push">
+	<header class="push">
 
-			<!-- off-canvas nav menu for mobile -->
-			<a href="#mobile" title="menu" class="menu-link">&#9776;</a>
-			<nav id="mobile" class="panel" role="navigation">
-		    <ul>
-		    		<li><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
-		    		<li><a href="/info.html">Info</a></li>
-		        <li><a href="https://www.dropbox.com/s/5hjbixi5zbkaqw9/dinner-menu.pdf?dl=0">Daily Menu</a></li>
-		        <li><a href="https://www.dropbox.com/s/jzdi5sxne5qb45d/prixfixe-menu.pdf?dl=0">Sunday Prix Fixe</a></li>
-		        <li><a href="https://www.dropbox.com/s/56qla4aiuwg46mn/tasting-menu.pdf?dl=0">Monthly Tasting</a></li>
-		        <li><a href="/gallery.html">Gallery</a></li>
-		    </ul>
-			</nav>
+		<!-- off-canvas nav menu for mobile -->
+		<a href="#mobile" class="menu-link">&#9776;</a>
+		<nav id="mobile" class="panel" role="navigation">
+	    <ul>
+	    		<li><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
+	    		<li><a href="/#info">Info</a></li>
+	        <li><a href="/daily-menu.html">Daily Menu</a></li>
+	        <li><a href="/sunday-menu.html">Sunday Prix Fixe</a></li>
+	        <li><a href="/tuesday-tasting.html">Tuesday Tastings</a></li>
+	        <li><a href="/#gallery">Gallery</a></li>
+	    </ul>
+		</nav>
 
 
-			<nav id="main-nav">
-				<ul>
-					<li><a href="/info.html">INFO</a></li>
-					<li><a href="/menu.html">MENU</a></li>
-					<li><a href="/gallery.html">GALLERY</a></li>
-					<li class="ot-button"><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274">Make a Reservation</a></li>
-				</ul>
-			</nav>
-			
-		</header>
-
-
-		<h1 class="push">
-			<span>Will BYOB</span>
-			<img class="logo" src="img/willbyob-logo.svg">
-		</h1>
-
-		<div class="footer push">
+		<nav id="main-nav">
 			<ul>
-				<li>1911&nbsp;East&nbsp;Passyunk&nbsp;Ave. Philadelphia,&nbsp;PA</li>
-				<li class="phone">(215)&nbsp;271-7683</li>
-				<li class="email"><a href="mailto:info@willbyob.com">info@willbyob.com</a></li>
+				<li class="dropdown" >
+					<a href="#">Menu</a>
+					<ul id="menu-dropdown">
+						<li><a href="daily-menu.html">Daily Menu</a></li>
+            <li><a href="sunday-menu.html">Sunday Prix Fixe</a></li>
+            <li><a href="tuesday-tasting.html">Tuesday Tasting Menu</a></li>
+					</ul>
+				</li>
+				<li><a href="/#info">Info</a></li>
+				<li><a href="/#gallery">Gallery</a></li>
+				<li id="ot-button"><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274" alt="OpenTable Reservation">Make a Reservation</a></li>
 			</ul>
+		</nav>
+		<h1>
+			<a href="/">
+				<span>Will BYOB</span>
+			</a>
+		</h1>
+		<!-- <div id="open-table" class="">
+			<script type="text/javascript" src="https://secure.opentable.com/frontdoor/default.aspx?rid=90274&restref=90274&bgcolor=372e5a&titlecolor=ffffff&subtitlecolor=f4f4f4&btnbgimage=https://secure.opentable.com/frontdoor/img/ot_btn_black.png&otlink=FFFFFF&icon=light&mode=wide&hover=1"></script><a href="http://www.opentable.com/will-byob-reservations-philadelphia?rtype=ism&restref=90274" class="OT_ExtLink">Will BYOB (90274), Philadelphia / New Jersey Suburbs Reservations</a>
+		</div> -->
+	</header>
+
+	<section id="main">
+
+		<div class="centered push">
+			<h2>A Modern French-inspired BYOB</h2>
+			<h3>located on East Passyunk Avenue in the heart of South Philadelphia</h3>
 		</div>
-	</div>
-	</div>
+		<!-- <footer class="bottom push">
+			<div class="row">
+				<h4 class="addy">1911 East Passyunk Avenue Philadelphia, PA 19148</h4>
+				<h4>
+					<span class="phone">(215) 271-7683</span>
+					<span class="email"><a href="mailto:info@willbyob.com">info@willbyob.com</a></span>
+				</h4>
+				<h4 class="social">
+					<a class="icon-twitter" href="http://www.twitter.com/willbyob" alt="twitter"></a>
+					<a class="icon-facebook" href="http://www.facebook.com/willbyob" alt="facebook"></a>
+				</h4>
+			</div>
+		</footer> -->
+		
+	</section>
+
+	<section id="info">
+		<div id="content" class="push">
 	
+			<p>Will is a modern French inspired BYOB, located on East Passyunk Avenue in the heart of South Philadelphia. Chef and Owner Christopher Kearse, and his team, prepare a menu focused on its season, respecting French traditions along with classic and modern techniques to build a dining experience that evokes excitement and emotion.</p>
+			<p>Our four- course Sunday menu is a great way to sample items you otherwise would not see on our a la carte menu.  Ingredients found at surrounding farmer's markets give inspiration for this weekly featured menu.</p>
+			<div class="spacer"></div>
+			<h4 class="addy">
+				<span>1911 East Passyunk Avenue </span>&nbsp;
+				<span>Philadelphia, PA 19148</span>
+			</h4>
+			<h4>
+				<span class="icon-phone">&nbsp;(215) 271-7683</span>&nbsp;&nbsp;<span class="icon-mail">&nbsp;<a href="mailto:info@willbyob.com">info@willbyob.com</a></span>
+			</h4>
+			<h4 class="social">
+				<a class="icon-twitter-circled" href="http://www.twitter.com/willbyob" alt="twitter"></a>
+				<a class="icon-facebook-circled" href="http://www.facebook.com/willbyob" alt="facebook"></a>
+			</h4>
+			
+		</div>
+
+	</section>
+
+	<section id="gallery">
+		<div class="push">
+			<ul class="instagram"></ul>
+		</div>
+
+	</section>
 
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 		 http://chromium.org/developers/how-tos/chrome-frame-getting-started -->

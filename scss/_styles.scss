@@ -8,9 +8,9 @@ html, body {
 }
 
 body {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: 'Crimson Text', Georgia, serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   color: $black;
   -webkit-font-smoothing: antialiased;
 
@@ -18,7 +18,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $navy;
+  color: #888;
   cursor: pointer;
   font-weight: 400;
   transition: all .1s linear;
@@ -30,7 +30,7 @@ a {
   }
 }
 
-p { margin-bottom: 20px;}
+p { margin-bottom: 20px; }
 
 ::-moz-selection {
   background: $chef-blue;
@@ -60,110 +60,70 @@ p { margin-bottom: 20px;}
 /* ==========================================================================
    Site styles
    ========================================================================== */
+$susy: (
+  columns: 12,
+  gutters: .5,
+  gutter-position: after,
+);
 
 header {
-  position: fixed!important;
-  top: 0;
-  height: 155px;
-  width: 100%;
-  margin: 0;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba( 0, 0, 0, .25);
-  background: url('../img/willbyob-logo.svg') no-repeat center center #fff;
-  background-size: auto 95px;
+  &.info {
+    background: url("../img/info.jpg") center -300px fixed $chef-blue;
+    background-size: cover;
+    height: 400px;
+  }
   
-  h1 {
-
-    a {
-      position: absolute;
-      display: block;
-      height: 95px;
-      width: 150px;
-      top: 40px;
-      right: 50%;
-      margin-right: -65px;
-      cursor: pointer;
-
-      span { display: none; }
-    }
+  &.menu {
+    background: url("../img/kitchen.jpg") center -140px fixed $chef-blue;
+    background-size: cover;
+    height: 400px;
+  }
+  &.gallery {
+    background: url("../img/optimized/table-setting1.jpg") center -140px fixed $chef-blue;
+    background-size: cover;
+    height: 400px;
   }
 
   #main-nav {
-
-    @include container;
-    @include clearfix;
-
-    #menu-dropdown {
-      position: absolute;
-      display: none;
-      background-color: #fff;
-      border-top: 2px solid $chef-blue;
-      padding: 0;
-      margin: 0;
-      margin-top: 10px;
-      box-shadow: 0 2px 6px rgba( 0, 0, 0, .25);
-
-      &:before {
-        content: '';
-        width: 43px;
-        height: 4px;
-        background-color: $chef-blue;
-        display: block;
-        position: absolute;
-        margin-top: -6px;
-      }
-
-      li {
-        margin: 0;
-        border-bottom: 1px solid $light-gray;
-        display: block;
-        float: none;
-        
-        @include clearfix;
-
-        &:last-of-type { border: none;}
-
-        a {
-          display: block;
-          padding: 6px 16px;
-          line-height: 30px;
-          font-size: 1.2rem;
-          border: none;
-          &:hover { 
-            background-color: $chef-blue; 
-            font-weight: 400; 
-            color: #fff; 
-          }
-        }
-      }
-    }
+    padding-top: 20px;
 
     ul{
       @include container(1000px);
       @include clearfix;
       padding: 0 30px;
-      margin-top: 100px;
-
 
       li {
         float: left;
-        font-size: 1.2rem;
-        margin-right: 4%;
+        margin-right: 20px;
         display: inline-block;
 
         a {
+          color: #fff;
+          font-family: 'Raleway', Arial, sans-serif;
+          font-size: 1.3em;
+          text-shadow: 0px 0px 22px rgba(0,0,0,.2);
           padding: 16px 0;
           border-bottom: 1px solid transparent;
 
-          &:hover { border-bottom: 4px solid $chef-blue; padding: 6px 0; }
+          &:hover { border-bottom: 2px solid #fff; padding: 6px 0; }
         }
       }
 
-      #ot-button {
+      .ot-button {
         float: right;
         margin-right: 0;
       }
     }
+  }
+
+  .nav-logo {
+    display: block;
+    width: 120px;
+    position: relative;
+    transform: translateY(-40%);
+    margin: 0 auto;
+    text-align: center;
+
   }
 }
 
@@ -173,14 +133,19 @@ header {
     position: fixed;
     left: -19em; /*left or right and the width of your navigation panel*/
     width: 19em; /*should match the above value*/
+    z-index: 50;
 }
 
 .menu-link {
-  font-size: 2.2em;
+  color: #fff;
+  display: block;
+  line-height: 40px;
+  width: 40px;
+  padding: 20px;
+  font-size: 40px;
   -webkit-font-smoothing: antialiased;
   display: none;
-  padding: 50px 30px 20px;
-
+  &:hover { color: #fff; opacity: .7;}
 }
 
 #mobile {
@@ -211,48 +176,189 @@ header {
   }
 }
 
-/* ----- Open Table slide out div ----- */
-
-#open-table {
-  display: block;
-  width: 100%;
-  background-color: #372e5a;
-  padding: 20px 0 0;
-  z-index: 2;
-
-  #OT_form {
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .OT_wrapper {
-    border: none;
-  }
-
-  #OTButton a { transition: none; }
-  #OTButton a:hover { transition: none; }
-}
-
-
 /* ----- Main content ----- */
 
-#main {
+.wrapper {
   height: 100%;
   height: 100vh;
-  // margin-top: -155px;
-  background: url('../img/optimized/table-setting1.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  z-index: 3;
 
-  .centered {
-    background-color: rgba(27, 33, 60, .85);
-    border-radius: 2px;
-    padding: 10px 10px 20px;
+  &.main {
+    background: url("../img/dish1.jpg") center bottom fixed $chef-blue;
+    background-size: cover;
+  }
+
+  .overlay {
+    height: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.25);
+
+    &.blue {
+      background: rgba(40,56,145,.8);
+      max-height: 400px;
+    }
+  }
+
+  h1 {
+    position: relative;
+    top: 32%;
+    transform: translateY(-40%);
+    margin: 0 auto;
+    text-align: center;
+
+    span { display: none; }
+    .logo {
+      position: relative;
+      max-width: 500px;
+      padding-left: 18px;
+    }
+  }
+
+  h2 {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: "Crimson Text", Georgia, serif;
+  }
+
+
+
+  .footer {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    
+
+    ul {
+      @include container(1000px center);
+      padding: 0 30px;
+      text-align: center;
+
+      li { 
+        display: inline-block;
+        font-size: 1.7em;
+        padding-right: 20px;
+        &:last-of-type {padding-right: 0;}
+      }
+    }
+
+    a {
+      color: #fff;
+      &:hover {opacity: .6;}
+    }
   }
 }
+
+footer {
+  background-color: $chef-blue;
+  color: #fff;
+  width: 100%;
+  padding: 30px 0;
+  
+
+  ul {
+    @include container(1000px center);
+    padding: 0 30px;
+    text-align: center;
+
+    li { 
+      display: inline-block;
+      font-size: 1.7em;
+      padding-right: 20px;
+      &:last-of-type {padding-right: 0;}
+    }
+  }
+
+  a {
+    color: #fff;
+    &:hover {color: #fff; opacity: .6;}
+  }
+
+  .social {
+    margin: 20px auto 0;
+    display: block;
+    padding: 0;
+    font-size: 34px;
+    a {margin-right: 40px;}
+    a:last-of-type {margin: 0;}
+  }
+}
+
+.content {
+  @include container(700px);
+  padding: 50px 20px;
+
+  .hours {
+    text-align: center;
+    color: $medium-gray;
+    margin-bottom: 80px; 
+
+    h3 {
+      color: $chef-blue;
+      margin-bottom: 16px; 
+    }
+  }
+}
+
+h4 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  font-family: 'Raleway', Arial, sans-serif;
+  color: $chef-blue;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 20px;
+    background-color: $chef-blue;
+    text-align: center;
+    margin: 10px auto 0;
+  }
+}
+
+h5 {
+  font-style: italic;
+  font-size: 20px;
+  color: $medium-gray;
+}
+
+.menus {
+  @include container(700px);
+  padding-top: 50px;
+  .btn {
+    box-sizing: border-box;
+    display: block;
+    @include span(4 of 12);
+    @include clearfix;
+    padding: 40px 0;
+    border: 2px solid $chef-blue;
+    text-align: center;
+    &:last-of-type {@include span(4 of 12 last);}
+    &:hover {
+      background-color: $chef-blue;
+      h4 {color: #fff;}
+      h4:after {background-color: #fff;}
+      h5 {color: #fff;}
+    }
+  }
+}
+
+
+.chef-pic {
+  float: left;
+  display: block;
+  max-width: 315px;
+  padding: 20px 30px 50px 0;
+}
+
+
+// ================
 
 .centered {
   display: block;
@@ -264,7 +370,7 @@ header {
   text-align: center;
 
   h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Raleway', Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     text-shadow: 0 0 6px rgba(0, 0, 0, .35);
@@ -378,12 +484,11 @@ header {
   // }
 }
 
-#gallery {
-  padding-top:150px;
+.gallery {
   z-index: 1; 
 
   .instagram {
-    @include container(2000px center);
+    @include container(100% center);
     @include layout(12 0);
 
     li {
@@ -401,10 +506,4 @@ header {
       height: auto;
     }
   }
-}
-
-.bottom {
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
 }
