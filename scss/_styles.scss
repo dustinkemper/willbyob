@@ -109,9 +109,62 @@ header {
         }
       }
 
-      .ot-button {
+      // .ot-button {
+      //   float: right;
+      //   margin-right: 0;
+      // }
+
+      //new dropdown menu - - remember to delete ot-button above
+      .reserve {
         float: right;
         margin-right: 0;
+        //arrow for dropdown
+        &:after {
+          content: '';
+          float: right;
+          margin: 8px 0 0 6px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 5px 5px 0 5px;
+          border-color: #ffffff transparent transparent transparent;
+        }
+
+        a {
+          border: none;
+          padding: 0;
+          &:hover { border: none; }
+        }
+
+        &:hover {
+          .subnav { opacity: 1; transform: translateY(0); transition: opacity .3s ease-out, transform .1s ease-out; }
+        }
+      }
+
+      .subnav {
+        opacity: 0;
+        transform: translateY(-180px); //enough to be off-canvas
+        // margin-top: 6px;
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        box-shadow: 0px 2px 12px rgba(0,0,0,.2);
+        // transition: opacity .2s ease-out;
+
+        li { 
+          float: none; 
+          display: block;
+          padding: 10px 20px;
+          margin: 0; 
+        }
+
+        a {
+          // font-size: 1em;
+          padding: 0;
+          color: $chef-blue;
+          &:hover { color: $sky; }
+        }
+
       }
     }
   }
@@ -304,7 +357,8 @@ footer {
 
 h4 {
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  line-height: 1.5em;
   margin-bottom: 16px;
   font-family: 'Raleway', Arial, sans-serif;
   color: $chef-blue;
@@ -354,7 +408,7 @@ h5 {
   float: left;
   display: block;
   max-width: 315px;
-  padding: 20px 30px 50px 0;
+  padding: 20px 30px 5px 0;
 }
 
 

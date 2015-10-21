@@ -721,9 +721,49 @@ header #main-nav {
         header #main-nav ul li a:hover {
           border-bottom: 2px solid #fff;
           padding: 6px 0; }
-    header #main-nav ul .ot-button {
+    header #main-nav ul .reserve {
       float: right;
       margin-right: 0; }
+      header #main-nav ul .reserve:after {
+        content: '';
+        float: right;
+        margin: 8px 0 0 6px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #ffffff transparent transparent transparent; }
+      header #main-nav ul .reserve a {
+        border: none;
+        padding: 0; }
+        header #main-nav ul .reserve a:hover {
+          border: none; }
+      header #main-nav ul .reserve:hover .subnav {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-transition: opacity .3s ease-out, -webkit-transform .1s ease-out;
+                transition: opacity .3s ease-out, transform .1s ease-out; }
+    header #main-nav ul .subnav {
+      opacity: 0;
+      -webkit-transform: translateY(-180px);
+          -ms-transform: translateY(-180px);
+              transform: translateY(-180px);
+      background: #fff;
+      padding: 10px;
+      position: absolute;
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2); }
+      header #main-nav ul .subnav li {
+        float: none;
+        display: block;
+        padding: 10px 20px;
+        margin: 0; }
+      header #main-nav ul .subnav a {
+        padding: 0;
+        color: #283891; }
+        header #main-nav ul .subnav a:hover {
+          color: #8fa2f7; }
 header .nav-logo {
   display: block;
   width: 120px;
@@ -894,7 +934,8 @@ footer {
 
 h4 {
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  line-height: 1.5em;
   margin-bottom: 16px;
   font-family: 'Raleway', Arial, sans-serif;
   color: #283891;
@@ -955,7 +996,7 @@ h5 {
   float: left;
   display: block;
   max-width: 315px;
-  padding: 20px 30px 50px 0; }
+  padding: 20px 30px 5px 0; }
 
 .centered {
   display: block;
